@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kadryn case study — Nicolas Gonfo</title>
+<meta name="description" content="Evidence, governance and reliable SaaS workflow semantics in a private TypeScript SaaS system.">
+<link rel="canonical" href="/work/kadryn/">
+<meta property="og:title" content="Kadryn case study — Nicolas Gonfo">
+<meta property="og:description" content="Evidence, governance and reliable SaaS workflow semantics in a private TypeScript SaaS system.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="/work/kadryn/">
+<meta property="og:image" content="/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f6f5f1">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Nicolas Gonfo","sameAs":["https://github.com/WebNovation24"],"jobTitle":"Full-Stack TypeScript Engineer","homeLocation":{"@type":"Place","name":"Réunion, France"}}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="/">Nicolas Gonfo</a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="/#work">Work</a>
+      <a class="hide-mobile" href="/#about">About</a>
+      <a href="https://github.com/WebNovation24" rel="me">GitHub ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="shell case-hero">
+  <div class="eyebrow">Case study · Kadryn</div>
+  <h1>Evidence, governance and reliable SaaS workflow semantics</h1>
+  <p class="hero-copy">Kadryn is a SaaS system that observes AI usage and cost signals, derives operational insight, and keeps recommendation, decision and runtime control as distinct product concepts.</p>
+  <div class="tech-list" style="margin-top:24px"><span class="tech">TypeScript</span><span class="tech">Next.js</span><span class="tech">React</span><span class="tech">PostgreSQL</span><span class="tech">Prisma</span><span class="tech">Stripe</span><span class="tech">Inngest</span><span class="tech">Sentry</span><span class="tech">Vitest</span></div>
+</section>
+
+<section><div class="shell section case-grid">
+  <aside class="case-aside">
+    <div class="meta">Central challenge</div>
+    <p><strong>How do you design a cost-governance product without allowing product language or workflow state to overstate what the system actually knows?</strong></p>
+    <div class="meta" style="margin-top:28px">Constraints</div>
+    <p>Evidence boundary · Capability boundary · Integration surface · Verification scope · Private source repository.</p>
+  </aside>
+  <div>
+    <h2>Context</h2>
+    <p class="body-copy" style="margin-top:14px">AI usage data can support cost analysis, forecasting and optimization, but product semantics become risky when the interface implies more certainty than the underlying evidence supports. A recommendation is not an executed change. An executed change is not automatically a measured outcome. A measured outcome is not, by itself, causal proof of business impact.</p>
+    <div class="diagram" style="margin-top:30px" aria-label="Explanatory diagram of evidence and control states">
+      <div class="meta">Public-safe explanatory model</div>
+      <div class="diagram-node"><strong>Observe</strong> — usage and cost signals</div>
+      <div class="diagram-arrow">↓ evidence supports, but does not authorize</div>
+      <div class="diagram-node"><strong>Recommend</strong> — proposed action with context</div>
+      <div class="diagram-arrow">↓ explicit decision boundary</div>
+      <div class="diagram-node"><strong>Apply / enforce</strong> — only through the relevant control path</div>
+      <div class="diagram-arrow">↓ separate measurement</div>
+      <div class="diagram-node"><strong>Measure</strong> — outcome evidence without an automatic ROI claim</div>
+    </div>
+    <p class="note" style="margin-top:18px">This is an explanatory portfolio diagram, not a screenshot of the private product.</p>
+  </div>
+</div></section>
+
+<section><div class="shell section">
+  <div class="section-heading"><h2>Technical decisions</h2><p>Three decisions show how product semantics, asynchronous work and release evidence stay scoped.</p></div>
+  <article class="decision"><div class="decision-num">01</div><div><h3>Keep product authority proportional to evidence</h3><dl>
+  <div><dt>Problem</dt><dd>A cost/optimization product can make a workflow appear more conclusive than the underlying data permits.</dd></div>
+  <div><dt>Constraint</dt><dd>Applied changes, measured outcomes and user-confirmed outcomes are different states, and none automatically establishes causal ROI.</dd></div>
+  <div><dt>Decision</dt><dd>Model those states separately and keep observation, recommendation and runtime enforcement as distinct capabilities.</dd></div>
+  <div><dt>Implementation</dt><dd>Kadryn’s current Product Truth defines separate semantics for observed data, recommendations, governance and enforcement paths.</dd></div>
+  <div><dt>Verification</dt><dd>The canonical Product Truth is versioned, and the repository includes unit and integration test harnesses.</dd></div>
+  </dl></div></article>
+  <article class="decision"><div class="decision-num">02</div><div><h3>Separate background work from request handling</h3><dl>
+  <div><dt>Problem</dt><dd>Provider and data-processing work can exceed the responsibilities of a synchronous web request.</dd></div>
+  <div><dt>Constraint</dt><dd>External or long-running operations need their own execution lifecycle.</dd></div>
+  <div><dt>Decision</dt><dd>Use background workflow infrastructure for asynchronous processing.</dd></div>
+  <div><dt>Implementation</dt><dd>The application stack includes Inngest and operational data-workflow tooling.</dd></div>
+  <div><dt>Verification</dt><dd>Inngest is an evidenced dependency and unit/integration test scripts are present.</dd></div>
+  </dl></div></article>
+  <article class="decision"><div class="decision-num">03</div><div><h3>Treat release evidence as scoped evidence</h3><dl>
+  <div><dt>Problem</dt><dd>A configuration file or previous deployment can be mistaken for proof that the current candidate is valid.</dd></div>
+  <div><dt>Constraint</dt><dd>Changes can invalidate earlier evidence, and test configuration is not a passing run.</dd></div>
+  <div><dt>Decision</dt><dd>Use explicit unit/integration gates and release discipline rather than relying on tooling presence alone.</dd></div>
+  <div><dt>Implementation</dt><dd>Kadryn exposes unit and integration test commands and repository rules that distinguish code presence from runtime/release proof.</dd></div>
+  <div><dt>Verification</dt><dd>Public evidence supports the existence and scope of those gates, not universal correctness.</dd></div>
+  </dl></div></article>
+</div></section>
+
+<section><div class="shell section case-grid">
+  <aside class="case-aside"><div class="meta">Evidence / verification</div></aside>
+  <div class="evidence-block">Public-safe evidence includes the TypeScript/Next.js/PostgreSQL/Prisma stack, Stripe-related infrastructure, Inngest background workflows, Sentry integration, and unit/integration test harnesses. It does not support customer ROI, adoption or universal system reliability claims.</div>
+</div></section>
+
+<section><div class="shell section case-grid">
+  <aside class="case-aside"><div class="meta">Observable outcome</div></aside>
+  <div class="outcome-block"><h2>Claims bounded by explicit evidence states.</h2><p>The observable technical result is a SaaS architecture and product model in which operational claims are bounded by explicit evidence states, while billing, background processing and test infrastructure are part of the application stack.</p></div>
+</div></section>
+
+<section><div class="shell section">
+  <div class="section-heading"><h2>What this demonstrates</h2><p>Project-level capabilities supported by public evidence; no blocked first-person attribution is implied.</p></div>
+  <div class="demonstrates">
+    <article><strong>Product authority & evidence semantics</strong></article>
+    <article><strong>Modern TypeScript SaaS systems</strong></article>
+    <article><strong>Scoped verification & release evidence</strong></article>
+  </div>
+</div></section>
+
+<section><div class="shell section"><a class="next-card" href="/work/travel-orchestration/"><span class="meta">Next case study</span><strong>Travel orchestration SaaS</strong><span>Multi-tenant authority, RLS and critical workflow state →</span></a></div></section>
+</main>
+<footer class="site-footer"><div class="shell">© Nicolas Gonfo · Evidence-first editorial engineering</div></footer>
+</body></html>
