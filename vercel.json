@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "echo 'Using validated Agent 04 static site'",
+  "buildCommand": "echo 'Static portfolio ready'",
   "outputDirectory": "site",
   "framework": null
 }
