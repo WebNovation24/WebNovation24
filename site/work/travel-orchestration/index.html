@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Travel orchestration SaaS case study — Nicolas Gonfo</title>
+<meta name="description" content="Multi-tenant authority, RLS, critical workflow state and reproducible verification in a private travel operations system.">
+<link rel="canonical" href="/work/travel-orchestration/">
+<meta property="og:title" content="Travel orchestration SaaS case study — Nicolas Gonfo">
+<meta property="og:description" content="Multi-tenant authority, RLS, critical workflow state and reproducible verification in a private travel operations system.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="/work/travel-orchestration/">
+<meta property="og:image" content="/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f6f5f1">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Nicolas Gonfo","sameAs":["https://github.com/WebNovation24"],"jobTitle":"Full-Stack TypeScript Engineer","homeLocation":{"@type":"Place","name":"Réunion, France"}}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="/">Nicolas Gonfo</a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="/#work">Work</a>
+      <a class="hide-mobile" href="/#about">About</a>
+      <a href="https://github.com/WebNovation24" rel="me">GitHub ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="shell case-hero">
+  <div class="eyebrow">Case study · Travel orchestration SaaS</div>
+  <h1>Multi-tenant authority and critical workflow state</h1>
+  <p class="hero-copy">A modular multi-tenant travel operations system that separates authentication, business authorization, published traveler-facing state and critical workflow outcomes.</p>
+  <div class="tech-list" style="margin-top:24px"><span class="tech">TypeScript</span><span class="tech">Next.js</span><span class="tech">PostgreSQL</span><span class="tech">Supabase</span><span class="tech">Better Auth</span><span class="tech">Vitest</span><span class="tech">Playwright</span><span class="tech">RLS validation</span></div>
+</section>
+
+<section><div class="shell section case-grid">
+  <aside class="case-aside">
+    <div class="meta">Central challenge</div>
+    <p><strong>How do you preserve authority when a multi-tenant workflow crosses authentication, permissions, versioned business state, external operations and the browser?</strong></p>
+    <div class="meta" style="margin-top:28px">Constraints</div>
+    <p>Multi-tenancy · Authentication ≠ authorization · Defense in depth · Unknown outcomes · Release discipline · Private source repository.</p>
+  </aside>
+  <div>
+    <h2>Context</h2>
+    <p class="body-copy" style="margin-top:14px">Travel operations combine commercial state, itinerary work, publication, traveler access and later changes. The interface may know an action was initiated while the authoritative business result still belongs to the server, database or external provider.</p>
+    <div class="diagram" style="margin-top:30px" aria-label="Explanatory diagram of identity, authority and workflow state">
+      <div class="meta">Public-safe authority model</div>
+      <div class="diagram-node"><strong>Authentication</strong> — establish session identity</div>
+      <div class="diagram-arrow">↓ does not grant business capability by itself</div>
+      <div class="diagram-node"><strong>Business authorization</strong> — organization scope, memberships, capabilities</div>
+      <div class="diagram-arrow">↓ reinforced at the data layer</div>
+      <div class="diagram-node"><strong>PostgreSQL / Supabase RLS</strong> — defense in depth</div>
+      <div class="diagram-arrow">↓ critical operation may remain uncertain</div>
+      <div class="diagram-node"><strong>Reconcile authoritative outcome</strong> — UNKNOWN stays distinct from success</div>
+    </div>
+    <p class="note" style="margin-top:18px">This is an explanatory portfolio diagram, not a screenshot of the private product.</p>
+  </div>
+</div></section>
+
+<section><div class="shell section">
+  <div class="section-heading"><h2>Technical decisions</h2><p>Three decisions show how identity, state authority and release verification stay explicit across the system.</p></div>
+  <article class="decision"><div class="decision-num">01</div><div><h3>Authentication is not business authorization</h3><dl>
+  <div><dt>Problem</dt><dd>An authenticated session proves identity, but does not by itself define organization scope or business capability.</dd></div>
+  <div><dt>Constraint</dt><dd>Multi-tenant data and actions must stay scoped to explicit business authority, and UI visibility cannot serve as access control.</dd></div>
+  <div><dt>Decision</dt><dd>Separate authentication/session ownership from business identity and authorization, with database RLS as defense in depth.</dd></div>
+  <div><dt>Implementation</dt><dd>Better Auth owns session concerns while the product owns organizations, memberships, roles/capabilities and server-authoritative access decisions.</dd></div>
+  <div><dt>Verification</dt><dd>Repository documentation covers integration testing and pgTAP/RLS validation within the local verification gate.</dd></div>
+  </dl></div></article>
+  <article class="decision"><div class="decision-num">02</div><div><h3>Unknown is a first-class outcome</h3><dl>
+  <div><dt>Problem</dt><dd>External operations can leave the client uncertain after a timeout, interrupted navigation or provider return.</dd></div>
+  <div><dt>Constraint</dt><dd>Treating uncertainty as success can expose incorrect business state; blind retry can duplicate operations.</dd></div>
+  <div><dt>Decision</dt><dd>Represent uncertain outcomes explicitly and reconcile against authoritative state before declaring success.</dd></div>
+  <div><dt>Implementation</dt><dd>The product contract distinguishes operation state, authoritative result and unknown/conflict outcomes.</dd></div>
+  <div><dt>Verification</dt><dd>The invariant is explicit in the repository’s current product authority.</dd></div>
+  </dl></div></article>
+  <article class="decision"><div class="decision-num">03</div><div><h3>Make release evidence reproducible</h3><dl>
+  <div><dt>Problem</dt><dd>A multi-package SaaS can pass isolated checks while failing at data, build or browser boundaries.</dd></div>
+  <div><dt>Constraint</dt><dd>Release evidence needs to cross several layers and stay tied to a reproducible candidate.</dd></div>
+  <div><dt>Decision</dt><dd>Use a local verification gate spanning static checks, database/RLS validation, build and browser E2E.</dd></div>
+  <div><dt>Implementation</dt><dd>The repository exposes a canonical local verification workflow and explicit environment boundaries.</dd></div>
+  <div><dt>Verification</dt><dd>README/scripts document the gate scope and staging separation without claiming universal environmental proof.</dd></div>
+  </dl></div></article>
+</div></section>
+
+<section><div class="shell section case-grid">
+  <aside class="case-aside"><div class="meta">Evidence / verification</div></aside>
+  <div class="evidence-block">Public-safe evidence supports modular architecture boundaries, authentication separated from business authorization, PostgreSQL/Supabase RLS as defense in depth, a reproducible multi-layer local gate, logical staging separation and unknown outcomes represented separately from success. It does not support real-traveler adoption or business-impact claims.</div>
+</div></section>
+
+<section><div class="shell section case-grid">
+  <aside class="case-aside"><div class="meta">Observable outcome</div></aside>
+  <div class="outcome-block"><h2>Authority has an explicit place at every layer.</h2><p>The observable technical result is a multi-tenant system whose architecture gives explicit places to authentication, business authorization, database-level access controls, uncertain workflow outcomes and release verification.</p></div>
+</div></section>
+
+<section><div class="shell section">
+  <div class="section-heading"><h2>What this demonstrates</h2><p>Project-level capabilities supported by public evidence; no blocked first-person attribution is implied.</p></div>
+  <div class="demonstrates">
+    <article><strong>Identity, authorization & data access boundaries</strong></article>
+    <article><strong>Critical workflow state & uncertainty</strong></article>
+    <article><strong>Application, database & browser verification</strong></article>
+  </div>
+</div></section>
+
+<section><div class="shell section"><a class="next-card" href="/work/kadryn/"><span class="meta">Other case study</span><strong>Kadryn</strong><span>Evidence, governance and reliable SaaS workflow semantics →</span></a></div></section>
+</main>
+<footer class="site-footer"><div class="shell">© Nicolas Gonfo · Evidence-first editorial engineering</div></footer>
+</body></html>
