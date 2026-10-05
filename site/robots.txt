@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://portfolio-sooty-xi-pkkherd44e.vercel.app/sitemap.xml
