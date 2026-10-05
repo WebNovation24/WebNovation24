@@ -4,7 +4,7 @@ Professional portfolio for Nicolas Gonfo, Full-Stack TypeScript Engineer focused
 
 ## Live site
 
-Production URL will be added after Vercel promotion.
+https://portfolio-sooty-xi-pkkherd44e.vercel.app
 
 ## Routes
 
