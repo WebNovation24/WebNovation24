@@ -543,3 +543,179 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offs
 @media(prefers-reduced-motion:reduce){
   .hero-product-v5{transform:none!important}
 }
+
+
+/* AGENT 08S — HERO FIRST PREMIUM SIMPLIFICATION */
+.hero-v6{
+  position:relative;
+  overflow:hidden;
+  min-height:calc(100svh - var(--header-height));
+  background:
+    linear-gradient(rgba(36,87,214,.024) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(36,87,214,.024) 1px,transparent 1px),
+    var(--bg);
+  background-size:64px 64px;
+  border-bottom:1px solid var(--line);
+}
+.hero-v6::before{
+  content:"";
+  position:absolute;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--signal);
+  left:50%;
+  bottom:31px;
+  transform:translateX(-50%);
+  box-shadow:0 0 0 6px rgba(43,203,181,.06);
+  opacity:.72;
+}
+.hero-v6-inner{
+  min-height:calc(100svh - var(--header-height));
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:clamp(54px,7vh,76px) 0 34px;
+}
+.hero-role{justify-content:center}
+.hero-v6 h1{
+  width:min(100%,1060px);
+  margin:24px auto 22px;
+  font-size:clamp(4rem,6vw,6.25rem);
+  line-height:.94;
+  letter-spacing:-.064em;
+  text-wrap:balance;
+}
+.hero-v6 p{
+  width:min(100%,720px);
+  margin:0 auto;
+  color:#555c66;
+  font-size:clamp(1.05rem,1.3vw,1.2rem);
+  line-height:1.55;
+  text-wrap:balance;
+}
+.hero-actions-v6{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:22px;
+  margin-top:28px;
+}
+.hero-actions-v6 .button{
+  min-height:48px;
+  padding-inline:20px;
+}
+.hero-secondary-link{
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  text-decoration:none;
+  font-weight:760;
+  font-size:.92rem;
+  color:#505761;
+  border-bottom:1px solid transparent;
+  transition:color .18s ease,border-color .18s ease;
+}
+.hero-secondary-link:hover,.hero-secondary-link:focus-visible{
+  color:var(--ink);
+  border-color:var(--ink);
+}
+.hero-signature-v6{
+  width:min(100%,680px);
+  display:grid;
+  grid-template-columns:auto 1fr 7px 1fr auto 1fr 7px 1fr auto;
+  align-items:center;
+  gap:11px;
+  margin-top:clamp(38px,5vh,52px);
+  color:#7b818a;
+  font:700 .62rem ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  letter-spacing:.11em;
+}
+.hero-signature-v6 i{
+  height:1px;
+  background:#c7cad0;
+  transform-origin:left;
+}
+.hero-signature-v6 b{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--signal);
+  box-shadow:0 0 0 4px rgba(43,203,181,.06);
+}
+@media(max-width:1024px){
+  .hero-v6 h1{
+    width:min(100%,860px);
+    font-size:clamp(3.55rem,7.4vw,5rem);
+    line-height:.95;
+  }
+  .hero-v6 p{max-width:650px}
+  .hero-signature-v6{max-width:590px}
+}
+@media(max-width:768px){
+  .hero-v6{
+    min-height:auto;
+    background-size:52px 52px;
+  }
+  .hero-v6::before{display:none}
+  .hero-v6-inner{
+    min-height:auto;
+    padding:clamp(56px,9vh,82px) 0 clamp(46px,8vh,70px);
+  }
+  .hero-v6 h1{
+    width:min(100%,690px);
+    margin:18px auto 18px;
+    font-size:clamp(3.15rem,10.2vw,4.35rem);
+    line-height:.97;
+    letter-spacing:-.056em;
+  }
+  .hero-v6 p{
+    width:min(100%,590px);
+    font-size:1rem;
+  }
+  .hero-actions-v6{margin-top:24px}
+  .hero-signature-v6{width:min(100%,520px);margin-top:36px}
+}
+@media(max-width:430px){
+  .hero-v6-inner{padding:42px 0 44px}
+  .hero-role{font-size:.66rem}
+  .hero-v6 h1{
+    width:100%;
+    margin:16px auto 17px;
+    font-size:clamp(2.72rem,12.2vw,3.32rem);
+    line-height:.975;
+    letter-spacing:-.052em;
+  }
+  .hero-v6 p{
+    max-width:345px;
+    font-size:.95rem;
+    line-height:1.48;
+  }
+  .hero-actions-v6{
+    gap:17px;
+    margin-top:21px;
+  }
+  .hero-actions-v6 .button{min-height:46px;padding-inline:16px;font-size:.87rem}
+  .hero-secondary-link{font-size:.86rem}
+  .hero-signature-v6{
+    grid-template-columns:auto 1fr 6px 1fr auto 1fr 6px 1fr auto;
+    gap:7px;
+    width:100%;
+    margin-top:31px;
+    font-size:.52rem;
+    letter-spacing:.07em;
+  }
+  .hero-signature-v6 b{width:6px;height:6px}
+}
+@media(max-width:340px){
+  .hero-v6-inner{padding-top:36px}
+  .hero-v6 h1{font-size:2.55rem}
+  .hero-v6 p{font-size:.91rem}
+  .hero-signature-v6{font-size:.48rem;gap:5px}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-signature-v6 i{transform:none!important}
+}
