@@ -146,7 +146,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offs
 .hero-grid-v5{
   min-height:calc(100svh - var(--header-height));
   display:grid;
-  grid-template-columns:minmax(0,44fr) minmax(0,56fr);
+  grid-template-columns:minmax(0,46fr) minmax(0,54fr);
   grid-template-rows:minmax(0,1fr) auto;
   column-gap:clamp(34px,4.2vw,68px);
   align-items:center;
@@ -156,7 +156,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offs
 .hero-copy-v5{max-width:610px;z-index:2}
 .hero-copy-v5 h1{
   max-width:600px;
-  font-size:clamp(3.2rem,4.72vw,5.15rem);
+  font-size:clamp(3rem,3.75vw,4.15rem);
   line-height:.965;
   letter-spacing:-.058em;
   margin:16px 0 20px;
