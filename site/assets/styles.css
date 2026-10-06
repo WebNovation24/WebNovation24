@@ -712,7 +712,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offs
 }
 @media(max-width:340px){
   .hero-v6-inner{padding-top:36px}
-  .hero-v6 h1{font-size:2.55rem}
+  .hero-v6 h1{font-size:2.35rem}
   .hero-v6 p{font-size:.91rem}
   .hero-signature-v6{font-size:.48rem;gap:5px}
 }
