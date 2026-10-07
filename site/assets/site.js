@@ -2,12 +2,14 @@
   const reduce=matchMedia('(prefers-reduced-motion: reduce)');
   const reveal=[...document.querySelectorAll('.reveal,[data-reveal]')];
   const header=document.querySelector('[data-header]');
-  const trace=document.querySelector('.signal-trace');
+  const trace=document.querySelector('.signal-trace,.signal-path-v7');
+  const heroVideo=document.querySelector('[data-hero-video]');
 
   const showAll=()=>reveal.forEach(el=>el.classList.add('is-visible'));
+
   if(reduce.matches||!('IntersectionObserver' in window)){
     showAll();
-    if(trace) trace.classList.add('is-active');
+    trace?.classList.add('is-active');
   }else{
     const io=new IntersectionObserver(entries=>{
       for(const entry of entries){
@@ -20,17 +22,42 @@
     reveal.forEach(el=>io.observe(el));
 
     if(trace){
-      const tio=new IntersectionObserver(entries=>{
-        if(entries.some(e=>e.isIntersecting)){
+      const traceObserver=new IntersectionObserver(entries=>{
+        if(entries.some(entry=>entry.isIntersecting)){
           trace.classList.add('is-active');
-          tio.disconnect();
+          traceObserver.disconnect();
         }
       },{threshold:.25});
-      tio.observe(trace.parentElement);
+      traceObserver.observe(trace.parentElement);
     }
   }
 
   const updateHeader=()=>header?.classList.toggle('is-scrolled',scrollY>16);
   updateHeader();
   addEventListener('scroll',updateHeader,{passive:true});
+
+  const syncHeroVideo=()=>{
+    if(!heroVideo) return;
+    if(reduce.matches||document.hidden){
+      heroVideo.pause();
+      return;
+    }
+    heroVideo.play().catch(()=>{});
+  };
+
+  if(heroVideo){
+    syncHeroVideo();
+
+    if('IntersectionObserver' in window&&!reduce.matches){
+      const videoObserver=new IntersectionObserver(entries=>{
+        const visible=entries.some(entry=>entry.isIntersecting);
+        if(visible&&!document.hidden) heroVideo.play().catch(()=>{});
+        else heroVideo.pause();
+      },{threshold:.05});
+      videoObserver.observe(heroVideo);
+    }
+
+    document.addEventListener('visibilitychange',syncHeroVideo);
+    reduce.addEventListener?.('change',syncHeroVideo);
+  }
 })();
