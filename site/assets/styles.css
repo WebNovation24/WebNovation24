@@ -2343,3 +2343,409 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offs
   .hero-v8-copy{animation:none!important}
   .browser-frame-dark-v8{transform:none!important}
 }
+
+
+/* PORTFOLIO V3 — V8.1 PREMIUM LIGHT HARMONIZATION
+   Locked IA. Art-direction remediation only. */
+.home-v8{
+  --v8-bg:#F6F2EA;
+  --v8-paper:#FCFCFA;
+  --v8-ink:#102031;
+  --v8-muted:#66727D;
+  --v8-line:#D8DDE1;
+  --v8-cyan:#20BDB7;
+  --v8-blue:#3975E9;
+  --v8-dark:#102333;
+  --v8-dark-2:#173247;
+  background:var(--v8-bg);
+  color:var(--v8-ink);
+}
+
+.site-header-v8.is-scrolled{
+  background:rgba(246,242,234,.91)!important;
+  border-bottom-color:rgba(16,32,49,.08)!important;
+  box-shadow:0 10px 34px rgba(16,32,49,.045);
+}
+.header-cta-v8{
+  background:var(--v8-dark);
+  box-shadow:0 7px 22px rgba(16,35,51,.12);
+}
+
+/* Hero — keep video full bleed, reduce visual pressure from type. */
+.hero-v8{
+  background:#F4EFE7;
+}
+.hero-v8-overlay{
+  background:
+    radial-gradient(ellipse at 25% 49%,
+      rgba(250,248,244,.99) 0%,
+      rgba(250,248,244,.96) 28%,
+      rgba(250,248,244,.78) 44%,
+      rgba(250,248,244,.38) 60%,
+      rgba(250,248,244,.06) 77%,
+      rgba(250,248,244,0) 100%),
+    linear-gradient(180deg,rgba(255,255,255,.11),rgba(246,242,234,.05));
+}
+.hero-v8-system-lines{
+  opacity:.2;
+  background-image:
+    linear-gradient(rgba(32,189,183,.07) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(57,117,233,.055) 1px,transparent 1px);
+}
+.hero-v8-copy{
+  width:min(650px,54vw);
+}
+.hero-v8 h1{
+  max-width:650px;
+  font-size:clamp(3.15rem,4.55vw,4.85rem);
+  line-height:.96;
+  letter-spacing:-.058em;
+  margin:16px 0 20px;
+}
+.hero-v8-copy>p{
+  max-width:600px;
+  color:#51606D;
+  line-height:1.62;
+}
+.hero-v8-actions{margin-top:28px}
+.hero-v8-tags{margin-top:29px}
+.availability-v8{
+  background:rgba(252,252,250,.72);
+  border-color:rgba(16,32,49,.10);
+}
+.hero-v8-role{color:#287D87}
+
+/* Shared project image treatment. */
+.work-v81-visual{
+  position:relative;
+  margin:0;
+  overflow:hidden;
+}
+.work-v81-visual>img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+.work-v81-visual .truth-label-v8{
+  top:auto;
+  right:auto;
+  left:16px;
+  bottom:16px;
+  max-width:calc(100% - 32px);
+  background:rgba(252,252,250,.9);
+  border-color:rgba(16,32,49,.10);
+  color:#354556;
+}
+
+/* Kadryn — art-directed visual on a light mineral showcase. */
+.work-v8{
+  background:var(--v8-paper);
+}
+.work-v8-grid{
+  min-height:690px;
+}
+.work-v8-copy{
+  padding-top:66px;
+  padding-bottom:66px;
+}
+.work-v8-visual-kadryn{
+  margin:44px 0 44px 16px;
+  min-height:0;
+  align-self:stretch;
+  border-radius:22px;
+  background:
+    radial-gradient(circle at 82% 16%,rgba(32,189,183,.13),transparent 31%),
+    radial-gradient(circle at 14% 86%,rgba(57,117,233,.10),transparent 29%),
+    linear-gradient(145deg,#EEF2F2,#E7EDF0);
+  border:1px solid rgba(16,32,49,.08);
+  box-shadow:0 24px 70px rgba(27,48,66,.09);
+  padding:clamp(18px,2.3vw,34px);
+}
+.work-v8-visual-kadryn::before,
+.work-v8-visual-kadryn::after,
+.work-v8-visual-kadryn .visual-halo-v8{
+  display:none!important;
+}
+.work-v8-visual-kadryn>img{
+  width:100%;
+  max-height:610px;
+  object-fit:contain;
+  border-radius:14px;
+  box-shadow:0 16px 45px rgba(16,32,49,.12);
+}
+
+/* Travel — cool mineral contrast, no dark-mode interruption. */
+.travel-v8{
+  color:var(--v8-ink);
+  background:
+    radial-gradient(circle at 8% 90%,rgba(32,189,183,.09),transparent 28%),
+    linear-gradient(135deg,#E8EEF1 0%,#EEF2F2 52%,#F2F1EC 100%);
+  border-bottom:1px solid var(--v8-line);
+}
+.travel-v8-grid{
+  min-height:610px;
+  padding:64px 0;
+}
+.travel-v8 .eyebrow-v8-light{color:#447083}
+.travel-v8 .project-type-v8-light{color:#687A88}
+.travel-v8-copy>p{color:#5D6B77}
+.travel-v8 .button-light{
+  background:var(--v8-dark);
+  color:#fff;
+  border-color:var(--v8-dark);
+}
+.travel-v8 .truth-pill-v8{
+  color:#536677;
+  border-color:rgba(16,32,49,.16);
+  background:rgba(252,252,250,.46);
+}
+.travel-v8-visual{
+  border:1px solid rgba(16,32,49,.10);
+  box-shadow:0 25px 65px rgba(20,42,58,.10);
+  transform:none;
+}
+.travel-v8 .truth-label-dark-v8{
+  background:rgba(252,252,250,.9);
+  color:#354556;
+  border-color:rgba(16,32,49,.10);
+}
+
+/* Client proof — art-directed lead image, open secondary work. */
+.client-v8{
+  background:#FAF8F3;
+}
+.client-feature-v8{
+  padding-bottom:46px;
+}
+.client-feature-media-v8{
+  margin:0;
+  border-radius:20px;
+  background:#EEF1F2;
+  border:1px solid rgba(16,32,49,.08);
+  box-shadow:0 22px 58px rgba(16,32,49,.08);
+  padding:clamp(14px,1.9vw,24px);
+}
+.client-feature-media-v8>img{
+  border-radius:13px;
+  width:100%;
+  height:auto;
+}
+.client-secondary-v8{
+  gap:clamp(28px,4vw,52px);
+  padding-top:42px;
+}
+.client-secondary-card-v8{
+  grid-template-columns:minmax(0,.92fr) minmax(210px,1.08fr);
+  gap:28px;
+  padding:22px 0 0;
+  border:0;
+  border-top:1px solid #CBD1D5;
+  background:transparent;
+}
+.client-secondary-card-v8 figure{
+  border-radius:12px;
+  border:1px solid rgba(16,32,49,.07);
+}
+.client-secondary-card-v8 figure img{
+  min-height:190px;
+}
+
+/* Services — editorial columns rather than cards. */
+.services-v8{
+  background:#F1F2F0;
+}
+.services-v8-grid{
+  padding:58px 0;
+}
+.service-v8{
+  border-left-color:#CDD3D7;
+  padding-inline:30px;
+}
+.service-icon-v8{
+  background:rgba(57,117,233,.08);
+  color:#2F6BD2;
+  border:1px solid rgba(57,117,233,.10);
+}
+.service-v8 p{color:#65717B}
+
+/* Engineering — second display moment on a light technical surface. */
+.engineering-v8{
+  color:var(--v8-ink);
+  background:
+    linear-gradient(rgba(57,117,233,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(32,189,183,.035) 1px,transparent 1px),
+    radial-gradient(circle at 82% 112%,rgba(32,189,183,.10),transparent 29%),
+    linear-gradient(135deg,#E9EEF0,#EEF1EF 58%,#F4F1EA);
+  background-size:56px 56px,56px 56px,auto,auto;
+  border-bottom:1px solid var(--v8-line);
+}
+.engineering-v8-grid{
+  padding:72px 0;
+}
+.engineering-v8 .eyebrow-v8-light{color:#447083}
+.engineering-v8-heading h2{
+  color:var(--v8-ink);
+}
+.engineering-v8-heading p{
+  color:#61707C;
+}
+.systems-title-v8{color:#1D3547}
+.systems-line-v8{color:#607889}
+.systems-line-v8 i{
+  background:linear-gradient(90deg,#A9B8C3,var(--v8-cyan));
+}
+.systems-line-v8 b{
+  background:var(--v8-cyan);
+  box-shadow:0 0 0 5px rgba(32,189,183,.11);
+}
+.engineering-principles-v8 article{
+  border-left-color:#C8D2D8;
+}
+.service-icon-dark-v8{
+  background:rgba(32,189,183,.08);
+  color:#168D89;
+  border-color:rgba(32,189,183,.18);
+}
+.engineering-principles-v8 h3{color:#193044}
+.engineering-principles-v8 p{color:#64727E}
+
+/* About — editorial, not a data table. */
+.about-v8{
+  background:#F7F3EC;
+}
+.about-v8-grid{
+  grid-template-columns:.72fr 1.12fr .86fr;
+  gap:clamp(28px,4.5vw,62px);
+  padding:52px 0;
+}
+.about-v8-profile,
+.about-v8-copy,
+.about-v8-stack{
+  padding:0;
+}
+.about-v8-copy,
+.about-v8-stack{
+  border-left:0;
+  border-top:1px solid #CED1CF;
+  padding-top:16px;
+}
+.about-v8-profile h2{
+  margin-top:10px;
+  font-size:clamp(1.85rem,2.5vw,2.4rem);
+}
+.about-v8-copy>p{
+  max-width:56ch;
+  font-size:.98rem;
+  line-height:1.65;
+}
+
+/* Closing CTA — calm mineral finish instead of another dark block. */
+.contact-v8{
+  color:var(--v8-ink);
+  background:
+    radial-gradient(circle at 88% 52%,rgba(57,117,233,.08),transparent 28%),
+    radial-gradient(circle at 8% 120%,rgba(32,189,183,.10),transparent 28%),
+    linear-gradient(135deg,#E8EEF1,#F2EFE8 72%);
+  border-top:1px solid rgba(16,32,49,.06);
+}
+.contact-v8-grid{
+  min-height:220px;
+  padding:52px 0;
+}
+.contact-v8 .eyebrow-v8-light{color:#447083}
+.contact-v8 h2{
+  color:var(--v8-ink);
+  font-size:clamp(2.05rem,3.1vw,3.25rem);
+}
+.contact-v8 p{color:#64727D}
+.contact-v8 .button-light{
+  background:var(--v8-dark);
+  color:#fff;
+  border-color:var(--v8-dark);
+}
+.contact-v8 .button-dark-ghost-v8{
+  color:var(--v8-dark)!important;
+  border-color:rgba(16,35,51,.36)!important;
+  background:rgba(252,252,250,.38)!important;
+}
+.site-footer-v8{
+  background:#EEEAE2;
+  color:#68737D;
+  border-top:1px solid #D7D4CD;
+}
+
+/* Reduced card/elevation feeling. */
+.home-v8 .truth-label-v8{
+  font-size:.56rem;
+  letter-spacing:.045em;
+  box-shadow:none;
+}
+
+/* V8.1 responsive tuning */
+@media(max-width:1100px){
+  .hero-v8 h1{font-size:clamp(3rem,4.9vw,4.35rem)}
+  .work-v8-visual-kadryn{margin-left:0}
+}
+@media(max-width:900px){
+  .hero-v8-copy{width:min(610px,70vw)}
+  .hero-v8-overlay{
+    background:
+      radial-gradient(ellipse at 30% 43%,
+        rgba(250,248,244,.98) 0%,
+        rgba(250,248,244,.93) 35%,
+        rgba(250,248,244,.64) 58%,
+        rgba(250,248,244,.16) 82%,
+        transparent 100%);
+  }
+  .work-v8-visual-kadryn{
+    margin:0 0 48px;
+    padding:22px;
+  }
+  .client-secondary-card-v8{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .hero-v8-overlay{
+    background:
+      linear-gradient(180deg,
+        rgba(250,248,244,.97) 0%,
+        rgba(250,248,244,.93) 48%,
+        rgba(250,248,244,.68) 70%,
+        rgba(250,248,244,.14) 100%),
+      linear-gradient(90deg,rgba(250,248,244,.94),rgba(250,248,244,.10));
+  }
+  .hero-v8 h1{
+    font-size:clamp(2.55rem,10.8vw,3.65rem);
+    margin-bottom:17px;
+  }
+  .hero-v8-copy>p{line-height:1.55}
+  .work-v8-visual-kadryn{
+    margin-inline:-15px;
+    border-radius:0;
+    padding:15px;
+  }
+  .work-v8-visual-kadryn>img{border-radius:10px}
+  .client-feature-media-v8{
+    margin-inline:-15px;
+    border-radius:0;
+    padding:14px;
+  }
+  .client-secondary-card-v8{padding-top:20px}
+  .service-v8,.service-v8:first-of-type{
+    border-left:0;
+    border-top:1px solid #CDD3D7;
+  }
+  .engineering-principles-v8 article,
+  .engineering-principles-v8 article:first-child{
+    border-left:0;
+    border-top:1px solid #C8D2D8;
+  }
+  .about-v8-grid{gap:24px}
+  .about-v8-copy,.about-v8-stack{margin-top:0}
+}
+@media(prefers-reduced-motion:reduce){
+  .work-v8-visual-kadryn>img,
+  .client-feature-media-v8>img,
+  .travel-v8-visual{
+    transform:none!important;
+  }
+}
