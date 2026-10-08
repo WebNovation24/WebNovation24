@@ -3939,10 +3939,10 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offs
 /* V8.5 — mobile hero focal-point correction */
 @media (max-width:700px){
   .hero-v8-video{
-    object-position:82% bottom;
+    object-position:100% bottom;
   }
   .hero-v8-poster{
-    background-position:82% bottom;
+    background-position:100% bottom;
   }
 }
 
