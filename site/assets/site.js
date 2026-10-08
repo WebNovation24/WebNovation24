@@ -2,7 +2,7 @@
   const reduce=matchMedia('(prefers-reduced-motion: reduce)');
   const reveal=[...document.querySelectorAll('.reveal,[data-reveal]')];
   const header=document.querySelector('[data-header]');
-  const trace=document.querySelector('.signal-trace,.signal-path-v7');
+  const trace=document.querySelector('.signal-trace,.signal-path-v7,.systems-line-v8');
   const heroVideo=document.querySelector('[data-hero-video]');
 
   const showAll=()=>reveal.forEach(el=>el.classList.add('is-visible'));
