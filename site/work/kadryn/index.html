@@ -28,9 +28,9 @@
 <div class="signal-label"><span aria-hidden="true" class="signal-dot"></span> Case study · Kadryn</div>
 <h1>Evidence, governance and reliable SaaS workflow semantics.</h1>
 <p>Kadryn is a SaaS system that helps teams understand AI usage and cost signals while keeping recommendation, decision and runtime control as distinct product concepts.</p>
-<dl class="case-summary">
+<dl class="case-summary case-summary-v82">
 <div><dt>My role</dt><dd>Full-stack TypeScript · product engineering</dd></div>
-<div><dt>Key challenge</dt><dd>Keep product authority proportional to evidence</dd></div>
+<div><dt>Key challenge</dt><dd>Keep product authority proportional to evidence</dd></div><div><dt>Scope</dt><dd>Ingestion · product semantics · verification</dd></div>
 </dl>
 <div class="tech-list"><span>TypeScript</span><span>Next.js</span><span>PostgreSQL</span><span>Prisma</span><span>Stripe</span><span>Inngest</span><span>Sentry</span><span>Vitest</span></div>
 </div>
@@ -50,6 +50,20 @@
       <article><span>02</span><strong>Backend &amp; data depth</strong><p>PostgreSQL concurrency, exact replay handling, quotas and tenant boundaries are part of the product behavior.</p></article>
       <article><span>03</span><strong>Async system design</strong><p>Long-running work moves to background workflow infrastructure instead of being hidden inside synchronous request paths.</p></article>
       <article><span>04</span><strong>Verification discipline</strong><p>Unit/integration checks and candidate-scoped release evidence keep implementation claims proportional to what was actually verified.</p></article>
+    </div>
+  </div>
+</section>
+<section class="case-boundaries-v82" id="kadryn-boundaries" aria-labelledby="kadryn-boundaries-title">
+  <div class="shell">
+    <header>
+      <span class="kicker">Product Engineer lens</span>
+      <h2 id="kadryn-boundaries-title">Where the TypeScript system has to stay honest.</h2>
+      <p>Three boundaries connect the product experience to backend behavior and verifiable delivery.</p>
+    </header>
+    <div class="case-boundary-flow-v82">
+      <article><span class="meta">Domain semantics</span><strong>Signal → recommendation → decision</strong><p>Product language maps to distinct states instead of collapsing recommendation, applied change and measured outcome into one “success”.</p><code>observe → recommend → decide → control → measure</code></article>
+      <article><span class="meta">Ingestion boundary</span><strong>Replay handling before quota contention</strong><p>Exact retries can resolve as replays while tenant, retention and quota rules stay intact under concurrent PostgreSQL writes.</p><code>request → replay resolution → quota lock → write</code></article>
+      <article><span class="meta">Release boundary</span><strong>Candidate-scoped evidence</strong><p>Tests and build evidence are tied to the candidate being evaluated rather than treating tooling presence as proof.</p><code>unit / integration → build → scoped release evidence</code></article>
     </div>
   </div>
 </section>
