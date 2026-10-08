@@ -53,6 +53,20 @@
     </div>
   </div>
 </section>
+<section class="case-scenario-v83" id="kadryn-scenario" aria-labelledby="kadryn-scenario-title">
+  <div class="shell case-scenario-grid-v83">
+    <div>
+      <span class="kicker">Concrete failure mode</span>
+      <h2 id="kadryn-scenario-title">The same usage submission arrives twice while quota state is contested.</h2>
+      <p>The product must recognize an exact retry without weakening tenant, retention or quota rules for genuinely new usage.</p>
+    </div>
+    <div class="case-scenario-steps-v83" aria-label="Kadryn retry scenario">
+      <article><span>01 · Constraint</span><strong>Preserve existing safeguards</strong><p>Tenant, retention and monthly quota behavior could not be bypassed just to make retries idempotent.</p></article>
+      <article><span>02 · Scope choice</span><strong>Fix the direct-ingest ordering</strong><p>I kept the change narrow: replay resolution moved ahead of avoidable quota contention, with a guarded re-check inside the critical section for concurrent first submissions.</p></article>
+      <article><span>03 · Verification</span><strong>Reproduce the invariant</strong><p>The private regression suite covers the behavior; a small public TypeScript reproduction below makes the ordering inspectable without exposing production source.</p></article>
+    </div>
+  </div>
+</section>
 <section class="case-boundaries-v82" id="kadryn-boundaries" aria-labelledby="kadryn-boundaries-title">
   <div class="shell">
     <header>
@@ -75,6 +89,59 @@
   <img src="/assets/projects/kadryn-developers-overview-r2-b2-1.png" width="1448" height="1086" loading="lazy" alt="Kadryn canonical Developers Overview product UI artifact showing desktop and mobile states, integration readiness, required actions and technical status."/>
   <figcaption><span class="visual-tag">REAL PRODUCT DESIGN ARTIFACT · DEVELOPERS OVERVIEW R2-B2.1</span><span>Desktop + mobile implementation reference.</span></figcaption>
 </figure>
+<section class="technical-evidence-v83 reveal" id="public-typescript-evidence" aria-labelledby="public-typescript-evidence-title">
+  <div class="technical-evidence-head-v83">
+    <div><span class="meta">Public technical reproduction · TypeScript</span><h3 id="public-typescript-evidence-title">Replay before quota contention, with a guarded concurrent re-check.</h3></div>
+    <p>This is an independently written reproduction of the invariant described above — <strong>not production source code</strong>. It is intentionally small enough to inspect during a hiring screen.</p>
+  </div>
+  <div class="technical-evidence-code-v83">
+    <figure>
+      <figcaption>Implementation invariant</figcaption>
+      <pre><code>const knownReplay =
+  await repo.findExactReplay(command);
+
+if (knownReplay) {
+  return asReplay(knownReplay);
+}
+
+return repo.withMonthlyQuotaLock(
+  tenantId,
+  month,
+  async () =&gt; {
+    const concurrentReplay =
+      await repo.findExactReplay(command);
+
+    if (concurrentReplay) {
+      return asReplay(concurrentReplay);
+    }
+
+    return applyQuotaAndInsert(command);
+  },
+);</code></pre>
+    </figure>
+    <figure>
+      <figcaption>Concurrency regression</figcaption>
+      <pre><code>const results = await Promise.all([
+  ingestUsage(repo, command),
+  ingestUsage(repo, command),
+]);
+
+assert.equal(
+  results.filter(r =&gt; r.kind === "accepted").length,
+  1,
+);
+assert.equal(
+  results.filter(r =&gt; r.kind === "replay").length,
+  1,
+);
+assert.equal(repo.events.length, 1);</code></pre>
+    </figure>
+  </div>
+  <div class="technical-evidence-actions-v83">
+    <a class="button primary" href="https://github.com/WebNovation24/portfolio/tree/ux/v8.5-visual-corrections/technical-evidence/kadryn-replay-quota">Inspect the public reproduction <span aria-hidden="true">↗</span></a>
+    <span>Typecheck + 3 focused tests validated before publication.</span>
+  </div>
+</section>
 </div></div></section>
 <section class="section-band section-soft case-design-evidence-v85" id="responsive-system">
   <div class="shell section">
