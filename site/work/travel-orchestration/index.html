@@ -48,6 +48,20 @@
     </div>
   </div>
 </section>
+<section class="case-scenario-v83" id="travel-scenario" aria-labelledby="travel-scenario-title">
+  <div class="shell case-scenario-grid-v83">
+    <div>
+      <span class="kicker">Concrete failure mode</span>
+      <h2 id="travel-scenario-title">A session is still valid after organization membership is suspended.</h2>
+      <p>The user may still be authenticated, but the product must stop treating that session as proof of current business access.</p>
+    </div>
+    <div class="case-scenario-steps-v83" aria-label="Travel authorization scenario">
+      <article><span>01 · Constraint</span><strong>Identity can outlive authority</strong><p>Revoking business membership cannot rely on waiting for the browser session to expire or on client-side state becoming fresh.</p></article>
+      <article><span>02 · Scope choice</span><strong>Rebuild authority from current state</strong><p>I kept authentication and authorization separate: current organization/membership is resolved server-side, while RLS remains a second boundary at the data layer.</p></article>
+      <article><span>03 · Verification</span><strong>Reuse the same valid token</strong><p>AUTH-0 verifies the concrete outcome: the session remains valid while Data API and Storage access are denied after membership suspension.</p></article>
+    </div>
+  </div>
+</section>
 <section class="case-boundaries-v82" id="travel-boundaries" aria-labelledby="travel-boundaries-title">
   <div class="shell">
     <header>
