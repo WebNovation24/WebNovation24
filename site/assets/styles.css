@@ -5086,3 +5086,39 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offs
     margin-right:auto!important;
   }
 }
+
+
+/* V8.7.2 — mobile containment + accessible hidden copy */
+/* Keep accessibility-only descriptions in the accessibility tree without letting
+   them participate in flex/grid layout. */
+.sr-only{
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  padding:0!important;
+  margin:-1px!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;
+  border:0!important;
+}
+
+/* The real-estate reconstruction should read as two deliberate mobile screens,
+   not tiny squeezed cards. */
+.realestate-reconstruction-v8 .phone-v8{
+  flex-shrink:0;
+}
+@media (max-width:700px){
+  .work-v81-visual,
+  .travel-v8-visual,
+  .client-feature-media-v8{
+    width:100%!important;
+    margin-inline:0!important;
+  }
+  .realestate-reconstruction-v8 .phone-v8-list{
+    flex:0 0 min(40%,132px);
+  }
+  .realestate-reconstruction-v8 .phone-v8-detail{
+    flex:0 0 min(44%,144px);
+  }
+}
