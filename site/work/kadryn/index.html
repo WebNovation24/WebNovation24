@@ -101,23 +101,35 @@
   await repo.findExactReplay(command);
 
 if (knownReplay) {
-  return asReplay(knownReplay);
+  const quota = await repo.readQuota(
+    command.tenantId,
+    command.month,
+  );
+  return {
+    kind: "replay",
+    eventId: knownReplay.eventId,
+    usedAfter: quota.used,
+  };
 }
 
 return repo.withMonthlyQuotaLock(
-  tenantId,
-  month,
+  command.tenantId,
+  command.month,
   async () =&gt; {
     const concurrentReplay =
       await repo.findExactReplay(command);
 
     if (concurrentReplay) {
-      return asReplay(concurrentReplay);
-    }
-
-    return applyQuotaAndInsert(command);
-  },
-);</code></pre>
+      const quota = await repo.readQuota(
+        command.tenantId,
+        command.month,
+      );
+      return {
+        kind: "replay",
+        eventId: concurrentReplay.eventId,
+        usedAfter: quota.used,
+      };
+    }</code></pre>
     </figure>
     <figure>
       <figcaption>Concurrency regression</figcaption>
