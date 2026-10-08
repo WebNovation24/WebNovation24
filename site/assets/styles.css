@@ -3899,3 +3899,16 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offs
     transform:none!important;
   }
 }
+
+
+/* V8.4 QA fix — prevent the client feature from retaining a desktop min track at 320px. */
+@media(max-width:900px){
+  .client-feature-v8{
+    grid-template-columns:minmax(0,1fr)!important;
+  }
+  .client-feature-copy-v8,
+  .client-feature-media-v8{
+    min-width:0;
+    grid-column:1;
+  }
+}
