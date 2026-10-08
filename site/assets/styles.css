@@ -4199,3 +4199,28 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offs
     flex-direction:column;
   }
 }
+
+
+/* V8.5.1 — keep Kadryn board compact on phones */
+@media(max-width:520px){
+  .kadryn-stage-grid-v85{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .kadryn-stage-grid-v85 article{
+    min-height:210px;
+  }
+  .kadryn-stage-grid-v85 article:last-child{
+    grid-column:1/-1;
+    min-height:0;
+  }
+}
+@media(max-width:340px){
+  .kadryn-stage-grid-v85{
+    grid-template-columns:1fr;
+  }
+  .kadryn-stage-grid-v85 article,
+  .kadryn-stage-grid-v85 article:last-child{
+    grid-column:auto;
+    min-height:0;
+  }
+}
