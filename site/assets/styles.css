@@ -4249,3 +4249,44 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offs
     flex-direction:column;
   }
 }
+
+/* V8.5.3 — real Kadryn design artifact within verified contribution */
+.case-canonical-artifact-v85{
+  grid-column:1/-1;
+  margin:24px 0 0;
+  overflow:hidden;
+  border:1px solid rgba(16,32,49,.10);
+  border-radius:20px;
+  background:#061522;
+  box-shadow:0 24px 60px rgba(16,32,49,.10);
+}
+.case-canonical-artifact-v85>img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+.case-canonical-artifact-v85 figcaption{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:11px 13px;
+  border-top:1px solid #d8dfe2;
+  background:#f8f8f5;
+  color:#63717e;
+  font-size:.7rem;
+}
+.case-canonical-artifact-v85 figcaption .visual-tag{
+  color:#176b73;
+  border-color:rgba(32,189,183,.24);
+  background:rgba(32,189,183,.08);
+}
+@media(max-width:700px){
+  .case-canonical-artifact-v85{
+    border-radius:14px;
+  }
+  .case-canonical-artifact-v85 figcaption{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+}
