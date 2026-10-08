@@ -12,15 +12,15 @@
 <meta property="og:url" content="https://portfolio-sooty-xi-pkkherd44e.vercel.app/work/travel-orchestration/">
 <meta property="og:image" content="https://portfolio-sooty-xi-pkkherd44e.vercel.app/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#1d2026">
+<meta name="theme-color" content="#f6f2ea">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/styles.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Nicolas Gonfo","sameAs":["https://github.com/WebNovation24"],"jobTitle":"Full-Stack TypeScript Engineer","homeLocation":{"@type":"Place","name":"Réunion, France"}}</script>
 <script src="/assets/site.js" defer></script>
 </head>
-<body class="case-page travel-case">
+<body class="case-page case-v81 travel-case">
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header" data-header><div class="shell header-inner"><a class="brand" href="/">Nicolas Gonfo</a><nav class="nav" aria-label="Primary navigation"><a href="/#work">Work</a><a class="hide-mobile" href="/#approach">Approach</a><a class="hide-mobile" href="/#about">About</a><a href="https://github.com/WebNovation24" rel="me">GitHub <span aria-hidden="true">↗</span></a></nav></div></header>
+<header class="site-header site-header-v8 case-header-v81" data-header><div class="shell header-v8-inner"><a class="brand brand-v8" href="/">Nicolas Gonfo</a><nav class="nav nav-v8" aria-label="Primary navigation"><a href="/#work">Work</a><a href="/#services">Services</a><a class="hide-mobile" href="/#about">About</a></nav><a class="header-cta-v8" href="mailto:gonfo.nicolas@gmail.com">Let\'s talk <span aria-hidden="true">→</span></a></div></header>
 <main id="main">
 <section class="travel-hero-v4">
   <div class="shell travel-hero-grid">
@@ -28,10 +28,38 @@
       <div class="signal-label signal-label-dark"><span class="signal-dot" aria-hidden="true"></span> Case study · Travel orchestration SaaS</div>
       <h1>Multi-tenant authority and critical workflow state.</h1>
       <p>A private travel operations system that separates authentication, business authorization, published traveler-facing state and critical external outcomes.</p>
-      <dl class="case-summary case-summary-dark"><div><dt>My role</dt><dd>Full-stack TypeScript engineering</dd></div><div><dt>Key challenge</dt><dd>Keep authority correct across identity, data and providers</dd></div></dl>
+      <dl class="case-summary case-summary-dark case-summary-v82"><div><dt>My role</dt><dd>Full-stack TypeScript · product engineering</dd></div><div><dt>Key challenge</dt><dd>Keep authority correct across identity, data and providers</dd></div><div><dt>Scope</dt><dd>Auth · async workflows · reconciliation</dd></div></dl>
       <div class="tech-list tech-list-dark"><span>TypeScript</span><span>Next.js</span><span>PostgreSQL</span><span>Supabase</span><span>Better Auth</span><span>Vitest</span><span>Playwright</span><span>RLS</span></div>
     </div>
     <figure class="travel-case-cover" data-reveal="image"><img src="/assets/projects/travel-orchestration-cover-v3.png" alt="Conceptual travel orchestration cover illustrating authority, workflow and uncertain external outcomes." width="1400" height="876" fetchpriority="high"><figcaption><span class="visual-tag visual-tag-light">CONCEPT VISUAL</span></figcaption></figure>
+  </div>
+</section>
+<section class="case-capabilities-v81" aria-labelledby="travel-capabilities">
+  <div class="shell">
+    <div class="case-capabilities-head-v81">
+      <span class="kicker">Recruiter scan</span>
+      <h2 id="travel-capabilities">What this case demonstrates.</h2>
+    </div>
+    <div class="case-capabilities-grid-v81">
+      <article><span>01</span><strong>TypeScript system ownership</strong><p>Identity, authorization, workflow state and provider outcomes are handled as one product system rather than disconnected features.</p></article>
+      <article><span>02</span><strong>Authorization depth</strong><p>Better Auth, normalized actor context and Supabase RLS keep session identity separate from business capability.</p></article>
+      <article><span>03</span><strong>Durable async work</strong><p>Leases, bounded claiming, retries, dead-letter handling and audited manual recovery make background operations explicit.</p></article>
+      <article><span>04</span><strong>Provider reconciliation</strong><p>Durable inbox processing, idempotence and stale/out-of-order rejection prevent external providers from becoming business authority.</p></article>
+    </div>
+  </div>
+</section>
+<section class="case-boundaries-v82" id="travel-boundaries" aria-labelledby="travel-boundaries-title">
+  <div class="shell">
+    <header>
+      <span class="kicker">Product Engineer lens</span>
+      <h2 id="travel-boundaries-title">Authority crosses more than one layer.</h2>
+      <p>The implementation keeps identity, business capability, data access and provider outcomes separate.</p>
+    </header>
+    <div class="case-boundary-flow-v82">
+      <article><span class="meta">Identity boundary</span><strong>Session → ActorIdentity → ActorContext</strong><p>A valid session establishes identity; current organization and membership state are rechecked before business capability is trusted.</p><code>session ≠ business authorization</code></article>
+      <article><span class="meta">Data boundary</span><strong>Capability → PostgreSQL → RLS</strong><p>Server-side decisions and database RLS form separate layers, so access does not depend on stale client or session assumptions.</p><code>capability → query → row-level policy</code></article>
+      <article><span class="meta">Provider boundary</span><strong>Inbox → reconcile → authoritative state</strong><p>Idempotence, stale-event rejection and bounded recovery keep provider events as inputs to reconcile, not business truth by themselves.</p><code>event → inbox → reconcile → product state</code></article>
+    </div>
   </div>
 </section>
 <nav class="case-subnav shell" aria-label="Travel case study sections"><a href="#contribution">My contribution</a><a href="#challenge">Challenge</a><a href="#decisions">Decisions</a><a href="#evidence">Evidence</a></nav>

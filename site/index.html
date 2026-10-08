@@ -12,210 +12,285 @@
 <meta content="https://portfolio-sooty-xi-pkkherd44e.vercel.app/" property="og:url"/>
 <meta content="https://portfolio-sooty-xi-pkkherd44e.vercel.app/assets/og.png" property="og:image"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="#f6f5f1" name="theme-color"/>
+<meta content="#f4f1eb" name="theme-color"/>
 <link href="/assets/favicon.svg" rel="icon" type="image/svg+xml"/>
 <link href="/assets/styles.css" rel="stylesheet"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Nicolas Gonfo","sameAs":["https://github.com/WebNovation24"],"jobTitle":"Full-Stack TypeScript Engineer","homeLocation":{"@type":"Place","name":"Réunion, France"}}</script>
 <script defer src="/assets/site.js"></script>
 </head>
-<body>
+<body class="home-v8">
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header" data-header>
-  <div class="shell header-inner">
-    <a class="brand" href="/">Nicolas Gonfo</a>
-    <nav aria-label="Primary navigation" class="nav">
+
+<header class="site-header site-header-v8" data-header>
+  <div class="shell header-v8-inner">
+    <a class="brand brand-v8" href="/" aria-label="Nicolas Gonfo — home">Nicolas Gonfo</a>
+    <nav aria-label="Primary navigation" class="nav nav-v8">
+      <a class="is-active" href="#home">Home</a>
       <a href="#work">Work</a>
-      <a class="hide-mobile" href="#approach">Approach</a>
-      <a class="hide-mobile" href="#about">About</a>
-      <a href="https://github.com/WebNovation24" rel="me">GitHub <span aria-hidden="true">↗</span></a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
     </nav>
+    <a class="header-cta-v8" href="mailto:gonfo.nicolas@gmail.com">Let's talk <span aria-hidden="true">→</span></a>
   </div>
 </header>
 
 <main id="main">
-<section class="hero-v6">
-  <div class="shell hero-v6-inner" data-reveal="hero-copy">
-    <div class="signal-label hero-role"><span aria-hidden="true" class="signal-dot"></span> Full-Stack TypeScript Engineer</div>
-    <h1>I build SaaS products where permissions, workflows and data have to be right.</h1>
-    <p>Backend-oriented engineering for complex, workflow-heavy SaaS products.</p>
-    <div class="hero-actions-v6">
-      <a class="button primary" href="#work">View selected work <span aria-hidden="true">↓</span></a>
-      <a class="hero-secondary-link" href="https://github.com/WebNovation24">GitHub <span aria-hidden="true">↗</span></a>
-    </div>
-    <div aria-hidden="true" class="hero-signature-v6">
-      <span>SIGNAL</span><i></i><b></b><i></i><span>STATE</span><i></i><b></b><i></i><span>EVIDENCE</span>
+<section class="hero-v8" id="home">
+  <video
+    class="hero-v8-video"
+    data-hero-video
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata"
+    aria-hidden="true"
+  >
+    <source media="(max-width: 700px)" src="/assets/hero/portfolio-hero-mobile.webm" type="video/webm"/>
+    <source media="(max-width: 700px)" src="/assets/hero/portfolio-hero-mobile.mp4" type="video/mp4"/>
+    <source media="(max-width: 1024px)" src="/assets/hero/portfolio-hero-tablet.webm" type="video/webm"/>
+    <source media="(max-width: 1024px)" src="/assets/hero/portfolio-hero-tablet.mp4" type="video/mp4"/>
+    <source src="/assets/hero/portfolio-hero-loop.webm" type="video/webm"/>
+    <source src="/assets/hero/portfolio-hero-loop.mp4" type="video/mp4"/>
+  </video>
+  <div class="hero-v8-poster" aria-hidden="true"></div>
+  <div class="hero-v8-overlay" aria-hidden="true"></div>
+  <div class="hero-v8-system-lines" aria-hidden="true"></div>
+
+  <div class="shell hero-v8-inner">
+    <div class="hero-v8-copy" data-reveal="hero-copy">
+      <div class="availability-v8"><span aria-hidden="true"></span> Available for remote opportunities</div>
+      <div class="hero-v8-role">Full-Stack TypeScript Engineer · Product-minded</div>
+      <h1>I build SaaS products where permissions, workflows and data have to be right.</h1>
+      <p>Backend-oriented full-stack TypeScript engineering for workflow-heavy SaaS products, with a focus on permissions, business logic and reliable delivery.</p>
+      <div class="hero-v8-actions">
+        <a class="button primary" href="#work">View selected work <span aria-hidden="true">→</span></a>
+        <a class="button button-quiet" href="https://github.com/WebNovation24">View GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-v8-tags" aria-label="Engineering focus">
+        <span>SaaS</span><i>/</i><span>permissions</span><i>/</i><span>workflow-heavy systems</span>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="selected-work-v6 section-band" id="work">
-  <div class="shell section-v6">
-    <header class="section-title-v6 reveal">
-      <span class="kicker">01 · Selected work</span>
-      <h2>Selected work</h2>
-    </header>
-
-    <article class="project-v6 project-kadryn-v6 reveal">
-      <header class="project-head-v6">
-        <div>
-          <span class="meta">Kadryn · B2B SaaS</span>
-          <h3>Kadryn</h3>
-        </div>
-        <p class="project-statement-v6">AI usage and cost signals, decision accountability, reliable ingestion.</p>
-      </header>
-
-      <figure class="project-image-full-v6">
-        <picture>
-          <source media="(max-width: 620px)" srcset="/assets/projects/kadryn-real-homepage-mobile.webp" type="image/webp"/>
-          <img alt="Kadryn public product homepage with demo cost-change analysis and decision context." height="784" loading="lazy" sizes="(max-width: 1024px) 100vw, 92vw" src="/assets/projects/kadryn-real-homepage.webp" srcset="/assets/projects/kadryn-real-homepage.webp 1600w" width="1600"/>
-        </picture>
-        <figcaption class="micro-caption">REAL PRODUCT UI · DEMO DATA</figcaption>
-      </figure>
-
-      <div class="project-meta-grid-v6">
+<section class="work-v8 work-kadryn-v8" id="work">
+  <div class="shell work-v8-grid">
+    <div class="work-v8-copy reveal">
+      <span class="eyebrow-v8">Featured work</span>
+      <h2>Kadryn</h2>
+      <span class="project-type-v8">AI cost management platform</span>
+      <h3>Turn AI cost signals into accountable decisions.</h3>
+      <p>Kadryn helps SaaS teams understand changes in AI usage and cost, decide what to do next, and keep recommendations separate from automated control.</p>
+      <div class="work-v8-proof">
         <div>
           <span>My work</span>
-          <strong>Concurrent ingestion<br/>Decision Accountability</strong>
+          <ul>
+            <li>Concurrent ingestion</li>
+            <li>Decision Accountability</li>
+          </ul>
         </div>
         <div>
           <span>Technical signals</span>
-          <strong>PostgreSQL concurrency<br/>State semantics · release evidence</strong>
+          <ul>
+            <li>PostgreSQL concurrency</li>
+            <li>State semantics · release evidence</li>
+          </ul>
         </div>
-        <a class="project-link" href="/work/kadryn/">Read the Kadryn case study <span aria-hidden="true">→</span></a>
       </div>
-    </article>
-  </div>
-</section>
-
-<section class="travel-v6 section-band">
-  <div class="shell travel-grid-v6">
-    <div class="travel-copy-v6 reveal">
-      <span class="meta">Travel orchestration SaaS · multi-tenant operations</span>
-      <h3>Travel orchestration</h3>
-      <p>A private travel operations system where authorization, RLS-backed access, durable async work and reconciliation remain explicit when external outcomes are uncertain.</p>
-      <div class="travel-signals-v6">
-        <div><span>My work</span><strong>Auth / authorization foundation<br/>Durable automation</strong></div>
-        <div><span>Technical signals</span><strong>RLS · reconciliation<br/>Unknown outcomes</strong></div>
-      </div>
-      <a class="project-link project-link-light" href="/work/travel-orchestration/">Read the travel case study <span aria-hidden="true">→</span></a>
+      <a class="button primary" href="/work/kadryn/">View case study <span aria-hidden="true">→</span></a>
     </div>
-    <figure class="travel-image-v6 reveal">
-      <img alt="Conceptual travel orchestration cover showing authority, workflow and external outcome states." height="876" loading="lazy" src="/assets/projects/travel-orchestration-cover-v3.png" width="1400"/>
-      <figcaption class="micro-caption micro-caption-dark">CONCEPT VISUAL</figcaption>
+
+    <figure class="work-v8-visual work-v8-visual-kadryn work-v81-visual reveal">
+      <img alt="Art-directed visual representing the Kadryn product experience, based on the real product." src="/assets/projects/kadryn-art-directed-project-visual-v8.png" width="1448" height="1086" loading="lazy"/>
+      <figcaption class="truth-label-v8">ART-DIRECTED PROJECT VISUAL · BASED ON REAL PRODUCT</figcaption>
     </figure>
   </div>
 </section>
 
-<section class="client-work-v6 section-band">
-  <div class="shell section-v6">
-    <header class="section-title-v6 section-title-split-v6 reveal">
-      <div>
-        <span class="kicker">02 · Client &amp; product work</span>
-        <h2>Selected client &amp; product work</h2>
+<section class="travel-v8">
+  <div class="shell travel-v8-grid">
+    <div class="travel-v8-copy reveal">
+      <span class="eyebrow-v8 eyebrow-v8-light">Featured work</span>
+      <h2>Travel orchestration SaaS</h2>
+      <span class="project-type-v8 project-type-v8-light">Travel operations &amp; workflow</span>
+      <h3>From complex travel operations to controlled outcomes.</h3>
+      <p>A private travel operations system where authorization, RLS-backed access, durable async work and reconciliation remain explicit when external outcomes are uncertain.</p>
+      <div class="travel-v8-actions">
+        <a class="button button-light" href="/work/travel-orchestration/">View case study <span aria-hidden="true">→</span></a>
+        <span class="truth-pill-v8">Concept visual</span>
       </div>
-      <p>Selected work across web, e-commerce and mobile product delivery.</p>
-    </header>
+    </div>
+    <figure class="travel-v8-visual reveal">
+      <img alt="Conceptual travel orchestration cover showing authority, workflow and external outcome states." src="/assets/projects/travel-orchestration-cover-v3.png" width="1400" height="876" loading="lazy"/>
+      <figcaption class="truth-label-v8 truth-label-dark-v8">CONCEPT VISUAL</figcaption>
+    </figure>
+  </div>
+</section>
 
-    <article class="client-feature-v6 reveal">
-      <figure class="client-feature-media-v6">
-        <picture>
-          <source media="(max-width: 620px)" srcset="/assets/projects/cle-solutions-real-homepage-mobile.webp" type="image/webp"/>
-          <img alt="Current Clé Solutions homepage for a Réunion locksmith and vehicle/building security business." height="785" loading="lazy" sizes="(max-width: 1024px) 100vw, 70vw" src="/assets/projects/cle-solutions-real-homepage.webp" srcset="/assets/projects/cle-solutions-real-homepage.webp 1600w" width="1600"/>
-        </picture>
-        <figcaption class="micro-caption">CURRENT LIVE SITE</figcaption>
-      </figure>
-      <div class="client-feature-copy-v6">
-        <span class="meta">Business website · WordPress</span>
-        <h3>Clé Solutions</h3>
-        <p>Responsive service website for a Réunion locksmith, structuring vehicle and building-security offers around calls, quote requests and local contact.</p>
-        <div class="project-facts"><span>WordPress Developer / Web Consultant</span><span>WordPress</span></div>
-        <a class="external-link" href="https://cle-solutions.com/">Visit live site <span aria-hidden="true">↗</span></a>
+<section class="client-v8">
+  <div class="shell client-v8-inner">
+    <article class="client-feature-v8 reveal">
+      <div class="client-feature-copy-v8">
+        <span class="eyebrow-v8">Selected client &amp; product work</span>
+        <h2>Clé Solutions</h2>
+        <span class="project-type-v8">Automotive key services · client project</span>
+        <p>A responsive service website for a Réunion locksmith, structuring vehicle and building-security offers around calls, quote requests and local contact.</p>
+        <ul class="client-points-v8">
+          <li>Responsive service experience</li>
+          <li>Local conversion &amp; SEO structure</li>
+          <li>Mobile-first delivery</li>
+          <li>Real client project</li>
+        </ul>
+        <a class="button primary" href="https://cle-solutions.com/">View project <span aria-hidden="true">→</span></a>
       </div>
+      <figure class="client-feature-media-v8 work-v81-visual">
+        <img alt="Art-directed visual for the real Clé Solutions client project." src="/assets/projects/cle-solutions-art-directed-project-visual-v8.png" width="1448" height="1086" loading="lazy"/>
+        <figcaption class="truth-label-v8">ART-DIRECTED PROJECT VISUAL · REAL CLIENT PROJECT</figcaption>
+      </figure>
     </article>
 
-    <div class="client-secondary-v6">
-      <article class="client-secondary-item-v6 reveal">
-        <figure>
-          <img alt="Conceptual editorial composition representing the Bien-Être Réunion service and e-commerce website." height="1050" loading="lazy" src="/assets/projects/bien-etre-reunion-cover-v3.png" width="1400"/>
-          <figcaption class="micro-caption">CONCEPT VISUAL</figcaption>
-        </figure>
+    <div class="client-secondary-v8">
+      <article class="client-secondary-card-v8 reveal">
         <div>
-          <span class="meta">Service + e-commerce website</span>
           <h3>Bien-Être Réunion</h3>
+          <span class="project-type-v8">Wellness &amp; beauty · concept</span>
           <p>Long-running web and digital work combining service presentation, e-commerce, SEO/content and an evolving customer journey.</p>
-          <div class="project-facts"><span>Web &amp; Digital Project Lead</span><span>E-commerce · SEO · Content</span></div>
-          <a class="external-link" href="https://bienetre-reunion.com/">Visit live site <span aria-hidden="true">↗</span></a>
+          <a class="text-link-v8 text-link-blue-v8" href="https://bienetre-reunion.com/">View project <span aria-hidden="true">→</span></a>
         </div>
-      </article>
-
-      <article class="client-secondary-item-v6 reveal">
         <figure>
-          <img alt="Conceptual reconstruction of the React Native real-estate mobile UI/UX." height="1050" loading="lazy" src="/assets/projects/real-estate-mobile-cover-v3-v2.png" width="1400"/>
-          <figcaption class="micro-caption">RECONSTRUCTED UI</figcaption>
+          <img alt="Conceptual editorial composition representing the Bien-Être Réunion service and e-commerce website." src="/assets/projects/bien-etre-reunion-cover-v3.png" width="1400" height="1050" loading="lazy"/>
+          <figcaption class="truth-label-v8">CONCEPT VISUAL</figcaption>
         </figure>
+      </article>
+
+      <article class="client-secondary-card-v8 client-secondary-card-app-v8 reveal">
         <div>
-          <span class="meta">Mobile application · React Native</span>
-          <h3>Real-estate mobile application</h3>
+          <h3>Real-estate mobile app</h3>
+          <span class="project-type-v8">React Native · production delivery</span>
           <p>Designed and implemented the UI/UX for a production React Native mobile application connected to a real-estate website.</p>
-          <div class="project-facts"><span>React Native Mobile Developer</span><span>Production UI/UX</span></div>
-          <p class="disclosure">Conceptual reconstruction based on the original React Native UI/UX work; historical screenshots are no longer available.</p>
+          <div class="mobile-app-signals-v8" aria-label="Project signals">
+            <span>Mobile UX</span><span>Property search</span><span>Responsive states</span>
+          </div>
         </div>
+        <figure class="realestate-reconstruction-v8">
+          <div class="phone-v8 phone-v8-list" aria-hidden="true">
+            <div class="phone-status-v8"><span>9:41</span><i></i></div>
+            <div class="phone-appbar-v8"><strong>Properties</strong><b>⌕</b></div>
+            <div class="phone-filter-v8"><span>All</span><span>For sale</span><span>Rent</span></div>
+            <div class="property-card-v8">
+              <div class="property-photo-v8 property-photo-a-v8"></div>
+              <div><strong>Villa · Saint-Denis</strong><span>4 rooms · 118 m²</span><b>€435k</b></div>
+            </div>
+            <div class="property-card-v8">
+              <div class="property-photo-v8 property-photo-b-v8"></div>
+              <div><strong>Apartment · Sainte-Clotilde</strong><span>3 rooms · 72 m²</span><b>€249k</b></div>
+            </div>
+            <div class="phone-nav-v8"><span>⌂</span><span>♡</span><span>◎</span></div>
+          </div>
+          <div class="phone-v8 phone-v8-detail" aria-hidden="true">
+            <div class="phone-status-v8"><span>9:41</span><i></i></div>
+            <div class="property-hero-v8"></div>
+            <div class="property-detail-v8">
+              <span class="property-eyebrow-v8">FOR SALE</span>
+              <strong>Villa with sea view</strong>
+              <span>Saint-Denis · Réunion</span>
+              <div class="property-facts-v8"><b>4 rooms</b><b>118 m²</b><b>2 baths</b></div>
+              <p>Bright living spaces, terrace and a clear route to contact the agency.</p>
+              <button type="button" tabindex="-1">View property</button>
+            </div>
+          </div>
+          <figcaption class="truth-label-v8">RECONSTRUCTED UI</figcaption>
+        </figure>
       </article>
     </div>
   </div>
 </section>
 
-<section class="engineering-v6 section-band" id="approach">
-  <div class="shell engineering-inner-v6">
-    <header class="engineering-heading-v6 reveal">
-      <span class="kicker kicker-on-dark">03 · How I engineer</span>
+<section class="services-v8" id="services">
+  <div class="shell services-v8-grid">
+    <div class="services-v8-heading reveal">
+      <span class="eyebrow-v8">How I can help</span>
+      <h2>From idea to a reliable, maintainable product.</h2>
+    </div>
+    <article class="service-v8 reveal">
+      <span class="service-icon-v8" aria-hidden="true">◈</span>
+      <h3>Build and ship SaaS MVPs</h3>
+      <p>Turn complex problems into usable products with a focus on real users, clean architecture and fast iteration.</p>
+    </article>
+    <article class="service-v8 reveal">
+      <span class="service-icon-v8" aria-hidden="true">↻</span>
+      <h3>Improve workflow-heavy products</h3>
+      <p>Bring clarity to complex flows, permissions and systems, and make them easier to operate and scale.</p>
+    </article>
+    <article class="service-v8 reveal">
+      <span class="service-icon-v8" aria-hidden="true">≋</span>
+      <h3>Integrate systems &amp; business logic</h3>
+      <p>Connect APIs, data and external services while keeping authority, failure states and verification explicit.</p>
+    </article>
+  </div>
+</section>
+
+<section class="engineering-v8" id="approach">
+  <div class="shell engineering-v8-grid">
+    <div class="engineering-v8-heading reveal">
+      <span class="eyebrow-v8 eyebrow-v8-light">How I engineer</span>
       <h2>Make the system’s authority visible.</h2>
-      <p>I work best on products where identity, state, data and external operations have to remain explicit under real constraints.</p>
-    </header>
-
-    <div aria-hidden="true" class="signal-trace signal-trace-v6">
-      <span>AUTHORITY</span><i></i><b></b><i></i><span>STATE</span><i></i><b></b><i></i><span>EVIDENCE</span>
+      <p>In workflow-heavy systems, real reliability comes from clear authority, explicit state and verifiable evidence.</p>
     </div>
-
-    <div class="engineering-themes-v6">
-      <article class="reveal"><span class="axis-num">01</span><h3>Authority &amp; access</h3><p>Multi-tenancy, identity, membership, permissions and server-authoritative access decisions.</p></article>
-      <article class="reveal"><span class="axis-num">02</span><h3>State &amp; async work</h3><p>Critical workflow transitions, background jobs and uncertain external outcomes that must not be mistaken for success.</p></article>
-      <article class="reveal"><span class="axis-num">03</span><h3>Data &amp; verification</h3><p>PostgreSQL integrity, scoped tests and release evidence tied to the candidate being evaluated.</p></article>
-    </div>
-  </div>
-</section>
-
-<section class="about-v6 section-band" id="about">
-  <div class="shell about-grid-v6">
-    <div class="about-profile-v6 reveal">
-      <span class="kicker">04 · About</span>
-      <strong>Nicolas Gonfo</strong>
-      <p>Réunion, France · UTC+4<br/>Remote worldwide</p>
-      <p>Full-stack TypeScript engineer focused on workflow-heavy SaaS products.</p>
-    </div>
-    <div class="about-stack-v6 reveal">
-      <span class="meta">Core stack</span>
-      <p>TypeScript · Node.js · React · Next.js · PostgreSQL<br/>Prisma · Supabase · Stripe · Inngest · Vitest · Playwright · Sentry</p>
-    </div>
-    <div class="about-earlier-v6 reveal">
-      <span class="meta">Earlier work</span>
-      <strong>RUNFAC</strong>
-      <p>Full Stack Web Developer<br/>JavaScript · PHP · Symfony<br/>Online-training platform</p>
+    <div class="engineering-v8-body">
+      <div class="systems-title-v8 reveal">Authority — State — Evidence</div>
+      <div class="systems-line-v8" aria-hidden="true"><span></span><i></i><b></b><i></i><span></span><i></i><b></b><i></i><span></span></div>
+      <div class="engineering-principles-v8">
+        <article class="reveal"><span class="service-icon-v8 service-icon-dark-v8" aria-hidden="true">⌁</span><h3>Authority &amp; access</h3><p>Model who can do what, make permissions explicit, and keep rules close to the data.</p></article>
+        <article class="reveal"><span class="service-icon-v8 service-icon-dark-v8" aria-hidden="true">◉</span><h3>State &amp; async work</h3><p>Design clear states for long-running processes and make progress visible to everyone.</p></article>
+        <article class="reveal"><span class="service-icon-v8 service-icon-dark-v8" aria-hidden="true">▤</span><h3>Data &amp; verification</h3><p>Ingest, transform and verify data from multiple sources with traceability and confidence.</p></article>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="contact-v6">
-  <div class="shell contact-inner-v6 reveal">
+<section class="about-v8" id="about">
+  <div class="shell about-v8-grid">
+    <div class="about-v8-profile reveal">
+      <span class="eyebrow-v8">About</span>
+      <h2>Nicolas Gonfo</h2>
+      <p>Réunion, France · UTC+4</p>
+      <p>Remote worldwide</p>
+    </div>
+    <div class="about-v8-copy reveal">
+      <p>Full-stack engineer with a product mindset, focused on SaaS products and complex web applications where permissions, workflows and data integrity shape the user experience.</p>
+    </div>
+    <div class="about-v8-stack reveal">
+      <span class="meta">Tech stack</span>
+      <p>TypeScript · Node.js · React · Next.js · PostgreSQL · Prisma · Supabase · Stripe · Inngest · Vitest · Playwright · Sentry</p>
+      <span class="meta">Contact</span>
+      <a class="about-email-v8" href="mailto:gonfo.nicolas@gmail.com">gonfo.nicolas@gmail.com</a>
+      <p>Remote opportunities · selected client work</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact-v8">
+  <div class="shell contact-v8-grid reveal">
     <div>
-      <span class="kicker kicker-on-dark">Next step</span>
+      <span class="eyebrow-v8 eyebrow-v8-light">Let's build</span>
       <h2>Building something where state, data and permissions matter?</h2>
+      <p>I’m open to new opportunities, interesting projects and technical conversations.</p>
     </div>
-    <a class="button button-light" href="https://github.com/WebNovation24">View GitHub <span aria-hidden="true">↗</span></a>
+    <div class="contact-v8-actions">
+      <a class="button button-light" href="mailto:gonfo.nicolas@gmail.com">Let's talk <span aria-hidden="true">→</span></a>
+      <a class="button button-dark-ghost-v8" href="https://github.com/WebNovation24">View GitHub <span aria-hidden="true">↗</span></a>
+    </div>
   </div>
 </section>
 </main>
 
-<footer class="site-footer"><div class="shell footer-inner"><span>© Nicolas Gonfo</span><span>Full-Stack TypeScript Engineer · Réunion, France · UTC+4</span></div></footer>
+<footer class="site-footer site-footer-v8">
+  <div class="shell footer-inner">
+    <span>© Nicolas Gonfo</span>
+    <span>Full-Stack TypeScript Engineer · Réunion, France · UTC+4</span>
+  </div>
+</footer>
 </body>
 </html>
