@@ -3912,3 +3912,25 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offs
     grid-column:1;
   }
 }
+
+
+/* V8.4.1 — narrow mobile containment */
+@media (max-width:360px){
+  .client-feature-v8{
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:24px;
+  }
+  .client-feature-copy-v8,
+  .client-feature-media-v8{
+    width:100%;
+    min-width:0;
+  }
+  .client-feature-media-v8{
+    margin:0;
+  }
+  .client-feature-media-v8>img{
+    width:100%;
+    max-width:100%;
+    height:auto;
+  }
+}
