@@ -3161,3 +3161,498 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offs
   .work-v81-visual,
   .travel-v8-visual{transform:none!important}
 }
+
+
+/* PORTFOLIO V3 — V8.2 RECRUITER PROOF + CASE STUDY HARMONIZATION */
+
+/* Contact replaces low-signal earlier-work metadata. */
+.about-email-v8{
+  display:inline-block;
+  margin-top:10px;
+  color:var(--v81-ink,#102031);
+  font-weight:760;
+  text-decoration:none;
+  overflow-wrap:anywhere;
+}
+.about-email-v8:hover,
+.about-email-v8:focus-visible{
+  color:var(--v81-blue,#3975e9);
+  text-decoration:underline;
+}
+
+/* Real-estate project: responsive HTML/CSS reconstruction instead of a blurry static cover. */
+.client-secondary-card-app-v8{
+  align-items:stretch;
+}
+.mobile-app-signals-v8{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:18px;
+}
+.mobile-app-signals-v8 span{
+  padding:6px 8px;
+  border:1px solid #d5dce1;
+  border-radius:999px;
+  background:rgba(255,255,255,.45);
+  color:#60707e;
+  font:700 .59rem ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  letter-spacing:.035em;
+  text-transform:uppercase;
+}
+.realestate-reconstruction-v8{
+  position:relative;
+  min-height:300px;
+  margin:0;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:clamp(12px,2vw,24px);
+  padding:32px 26px 25px;
+  border:1px solid rgba(16,32,49,.08);
+  border-radius:18px;
+  background:
+    radial-gradient(circle at 88% 12%,rgba(57,117,233,.10),transparent 26%),
+    radial-gradient(circle at 12% 92%,rgba(32,189,183,.09),transparent 28%),
+    linear-gradient(135deg,#f3f4f2,#e9eef0);
+}
+.phone-v8{
+  position:relative;
+  width:min(36%,150px);
+  aspect-ratio:9/18.8;
+  overflow:hidden;
+  border:5px solid #172230;
+  border-radius:23px;
+  background:#fff;
+  color:#172230;
+  box-shadow:0 18px 35px rgba(16,32,49,.14);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+.phone-v8-detail{
+  width:min(40%,164px);
+  transform:translateY(8px);
+}
+.phone-v8::before{
+  content:"";
+  position:absolute;
+  z-index:5;
+  top:5px;
+  left:50%;
+  width:34%;
+  height:8px;
+  transform:translateX(-50%);
+  border-radius:999px;
+  background:#172230;
+}
+.phone-status-v8{
+  height:22px;
+  padding:7px 9px 0;
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  font-size:5px;
+  font-weight:800;
+}
+.phone-status-v8 i{
+  width:14px;
+  height:4px;
+  margin-top:1px;
+  border-top:2px solid #172230;
+  border-bottom:1px solid #172230;
+}
+.phone-appbar-v8{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:7px 9px 5px;
+}
+.phone-appbar-v8 strong{font-size:8px}
+.phone-appbar-v8 b{
+  display:grid;
+  place-items:center;
+  width:17px;height:17px;
+  border-radius:50%;
+  background:#eef3f5;
+  font-size:8px;
+}
+.phone-filter-v8{
+  display:flex;
+  gap:4px;
+  padding:0 8px 7px;
+}
+.phone-filter-v8 span{
+  padding:3px 5px;
+  border-radius:999px;
+  background:#f0f3f5;
+  font-size:4.5px;
+  color:#66727e;
+}
+.phone-filter-v8 span:first-child{
+  background:#142a3d;
+  color:#fff;
+}
+.property-card-v8{
+  margin:0 7px 6px;
+  overflow:hidden;
+  border:1px solid #e0e5e8;
+  border-radius:8px;
+  background:#fff;
+}
+.property-photo-v8{
+  height:44px;
+  background:
+    linear-gradient(145deg,rgba(13,50,69,.06),rgba(44,151,171,.18)),
+    linear-gradient(22deg,#d9e5e3 0 42%,#f3efe7 42% 64%,#c2d9d8 64%);
+}
+.property-photo-b-v8{
+  background:
+    linear-gradient(145deg,rgba(57,117,233,.08),rgba(32,189,183,.14)),
+    linear-gradient(22deg,#d7dfe8 0 38%,#eef0ea 38% 67%,#bed5dd 67%);
+}
+.property-card-v8>div:last-child{
+  display:grid;
+  gap:2px;
+  padding:5px 6px 6px;
+}
+.property-card-v8 strong{font-size:5.2px}
+.property-card-v8 span{font-size:4.2px;color:#7a8490}
+.property-card-v8 b{font-size:5.2px;color:#0f7587}
+.phone-nav-v8{
+  position:absolute;
+  left:0;right:0;bottom:0;
+  height:24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  border-top:1px solid #e4e7e9;
+  background:#fff;
+  color:#587080;
+  font-size:7px;
+}
+.property-hero-v8{
+  height:78px;
+  margin-top:0;
+  background:
+    radial-gradient(circle at 72% 30%,rgba(255,255,255,.72),transparent 18%),
+    linear-gradient(160deg,#b7d6d8 0 38%,#e7e4dc 38% 60%,#94b9bf 60% 100%);
+}
+.property-detail-v8{
+  display:grid;
+  gap:4px;
+  padding:8px;
+}
+.property-eyebrow-v8{
+  font-size:4.2px!important;
+  font-weight:800;
+  letter-spacing:.08em;
+  color:#168f8b!important;
+}
+.property-detail-v8>strong{font-size:8px}
+.property-detail-v8>span{font-size:5px;color:#6e7a84}
+.property-facts-v8{
+  display:flex;
+  gap:4px;
+  margin:3px 0;
+}
+.property-facts-v8 b{
+  padding:3px 4px;
+  border-radius:5px;
+  background:#f0f3f4;
+  color:#465864;
+  font-size:4.4px;
+}
+.property-detail-v8 p{
+  margin:1px 0 3px!important;
+  color:#78838c!important;
+  font-size:4.6px!important;
+  line-height:1.35!important;
+}
+.property-detail-v8 button{
+  width:100%;
+  min-height:22px;
+  border:0;
+  border-radius:6px;
+  background:#102333;
+  color:#fff;
+  font-size:5.2px;
+  font-weight:800;
+}
+
+/* Case studies now share the homepage's premium light/mineral art direction. */
+.case-v81{
+  --case-bg:#f6f2ea;
+  --case-paper:#fcfcfa;
+  --case-mineral:#eef1f2;
+  --case-bluegray:#e8eef1;
+  --case-ink:#102031;
+  --case-muted:#63717e;
+  --case-line:#d8dfe2;
+  --case-cyan:#20bdb7;
+  --case-blue:#3975e9;
+  background:var(--case-bg);
+  color:var(--case-ink);
+}
+.case-v81 main{
+  padding-top:var(--v8-header,68px);
+}
+.case-v81 .case-header-v81{
+  background:rgba(250,248,243,.93)!important;
+  border-bottom:1px solid rgba(16,32,49,.07)!important;
+  backdrop-filter:blur(18px);
+}
+.case-v81 .case-hero-v4,
+.case-v81 .travel-hero-grid{
+  min-height:620px;
+  padding-top:clamp(58px,6vw,82px);
+  padding-bottom:clamp(48px,5vw,70px);
+}
+.case-v81 .case-hero-copy-v4 h1,
+.case-v81 .travel-hero-v4 h1{
+  color:var(--case-ink);
+  max-width:760px;
+  font-size:clamp(3rem,4.6vw,4.85rem);
+  line-height:.96;
+  letter-spacing:-.058em;
+}
+.case-v81 .case-hero-copy-v4>p,
+.case-v81 .travel-hero-v4 .case-hero-copy-v4>p{
+  color:var(--case-muted);
+  max-width:680px;
+}
+.case-v81 .signal-label,
+.case-v81 .signal-label-dark{
+  color:#3d738e;
+}
+.case-v81 .case-summary div,
+.case-v81 .case-summary-dark div{
+  border-color:var(--case-line);
+}
+.case-v81 .case-summary dt,
+.case-v81 .case-summary-dark dt{
+  color:#44778f;
+}
+.case-v81 .case-summary dd{
+  color:var(--case-ink);
+}
+.case-v81 .tech-list span,
+.case-v81 .tech-list-dark span{
+  color:#4e6272;
+  background:rgba(252,252,250,.72);
+  border-color:var(--case-line);
+}
+.case-v81 .case-real-visual,
+.case-v81 .travel-case-cover{
+  background:var(--case-mineral);
+  border:1px solid rgba(16,32,49,.09);
+  border-radius:24px;
+  box-shadow:0 24px 64px rgba(16,32,49,.09);
+}
+.case-v81 .travel-hero-v4{
+  color:var(--case-ink);
+  background:
+    radial-gradient(circle at 85% 12%,rgba(57,117,233,.08),transparent 24%),
+    linear-gradient(135deg,#eef1f2,#e8eef1 60%,#f3f1eb);
+}
+.case-v81 .travel-case-cover{
+  background:#f8f8f5;
+}
+.case-v81 .visual-tag-light{
+  color:#455866;
+  background:rgba(252,252,250,.92);
+}
+
+/* Recruiter scan: fast evidence of Product Engineer fit. */
+.case-capabilities-v81{
+  padding:36px 0 44px;
+  border-top:1px solid var(--case-line);
+  border-bottom:1px solid var(--case-line);
+  background:
+    radial-gradient(circle at 92% 15%,rgba(32,189,183,.08),transparent 23%),
+    var(--case-mineral);
+}
+.case-capabilities-head-v81{
+  display:grid;
+  grid-template-columns:.42fr 1.58fr;
+  gap:28px;
+  align-items:end;
+  margin-bottom:22px;
+}
+.case-capabilities-head-v81 h2{
+  margin:0;
+  max-width:760px;
+  color:var(--case-ink);
+  font-size:clamp(1.85rem,3vw,3rem);
+  line-height:1;
+  letter-spacing:-.045em;
+}
+.case-capabilities-grid-v81{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:1px solid #cbd5da;
+}
+.case-capabilities-grid-v81 article{
+  min-width:0;
+  padding:20px 22px 4px;
+  border-left:1px solid #cbd5da;
+}
+.case-capabilities-grid-v81 article:first-child{
+  border-left:0;
+  padding-left:0;
+}
+.case-capabilities-grid-v81 article>span{
+  display:block;
+  margin-bottom:12px;
+  color:#4b7a90;
+  font:800 .62rem ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+.case-capabilities-grid-v81 strong{
+  display:block;
+  margin-bottom:8px;
+  color:var(--case-ink);
+  font-size:.96rem;
+}
+.case-capabilities-grid-v81 p{
+  margin:0;
+  color:var(--case-muted);
+  font-size:.78rem;
+  line-height:1.5;
+}
+
+/* Light case-study rhythm. */
+.case-v81 .case-subnav{
+  background:rgba(252,252,250,.91);
+  border-color:var(--case-line);
+  box-shadow:0 12px 28px rgba(16,32,49,.05);
+}
+.case-v81 .section-band{
+  background:var(--case-paper);
+  border-color:var(--case-line);
+}
+.case-v81 .section-soft{
+  background:#f0f1ee;
+}
+.case-v81 .kicker,
+.case-v81 .contribution-editorial .meta,
+.case-v81 .decision-num{
+  color:#4b7890;
+}
+.case-v81 .case-section-title h2,
+.case-v81 .section-intro h2,
+.case-v81 .decision-row h3,
+.case-v81 .contribution-editorial h3,
+.case-v81 .case-close h2{
+  color:var(--case-ink);
+}
+.case-v81 .case-section-title p,
+.case-v81 .case-narrative>p,
+.case-v81 .contribution-editorial p,
+.case-v81 .decision-row p,
+.case-v81 .case-close p{
+  color:var(--case-muted);
+}
+.case-v81 .contribution-editorial article{
+  border-top-color:var(--case-ink);
+}
+.case-v81 .decision-row{
+  border-top-color:var(--case-line);
+}
+.case-v81 .system-model,
+.case-v81 .authority-model div,
+.case-v81 .next-system{
+  background:var(--case-paper);
+  border-color:var(--case-line);
+  box-shadow:none;
+}
+
+/* Evidence stays visually important without turning the site dark. */
+.case-v81 .proof-section-v4{
+  color:var(--case-ink);
+  background:
+    linear-gradient(rgba(57,117,233,.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(32,189,183,.03) 1px,transparent 1px),
+    linear-gradient(135deg,#e8eef1,#eef1f2);
+  background-size:56px 56px,56px 56px,auto;
+}
+.case-v81 .proof-section-v4 .case-section-title p{
+  color:var(--case-muted);
+}
+.case-v81 .proof-artifact,
+.case-v81 .proof-artifact-dark{
+  color:var(--case-ink);
+  background:rgba(252,252,250,.92);
+  border-color:#ccd6dc;
+  box-shadow:0 16px 44px rgba(16,32,49,.06);
+}
+.case-v81 .proof-head{
+  border-bottom-color:#d1dade;
+}
+.case-v81 .proof-head .meta{
+  color:#4b7890;
+}
+.case-v81 .proof-grid{
+  border-color:#d1dade;
+}
+.case-v81 .proof-grid div{
+  border-color:#d1dade;
+}
+.case-v81 .proof-grid span,
+.case-v81 .proof-detail span,
+.case-v81 .proof-artifact figcaption{
+  color:#657581;
+}
+.case-v81 .proof-detail{
+  background:#f0f3f3;
+}
+.case-v81 .case-close{
+  background:#f7f3ec;
+}
+.case-v81 .demonstrates-inline span{
+  color:#596b78;
+  border-color:var(--case-line);
+  background:rgba(252,252,250,.54);
+}
+.case-v81 .site-footer{
+  background:#ece9e2;
+  color:#687480;
+}
+
+@media(max-width:980px){
+  .case-capabilities-grid-v81{
+    grid-template-columns:1fr 1fr;
+  }
+  .case-capabilities-grid-v81 article:nth-child(3){
+    border-left:0;
+  }
+  .case-capabilities-grid-v81 article:nth-child(n+3){
+    border-top:1px solid #cbd5da;
+  }
+}
+@media(max-width:700px){
+  .realestate-reconstruction-v8{
+    min-height:270px;
+    padding:28px 14px 22px;
+  }
+  .phone-v8{width:38%}
+  .phone-v8-detail{width:42%}
+  .case-v81 main{padding-top:60px}
+  .case-capabilities-head-v81{
+    grid-template-columns:1fr;
+    gap:8px;
+  }
+  .case-capabilities-grid-v81{
+    grid-template-columns:1fr;
+  }
+  .case-capabilities-grid-v81 article,
+  .case-capabilities-grid-v81 article:first-child,
+  .case-capabilities-grid-v81 article:nth-child(3){
+    padding:16px 0;
+    border-left:0;
+    border-top:1px solid #cbd5da;
+  }
+  .case-capabilities-grid-v81 article:first-child{border-top:0}
+  .case-v81 .case-hero-copy-v4 h1,
+  .case-v81 .travel-hero-v4 h1{
+    font-size:clamp(2.65rem,11vw,3.8rem);
+  }
+}
