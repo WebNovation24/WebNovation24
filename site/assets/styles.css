@@ -5677,15 +5677,21 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offs
 /* User-provided mobile hero is already centered: no positional compensation. */
 @media(max-width:700px){
   .hero-v8-video{
-    object-fit:cover!important;
-    object-position:center center!important;
+    top:auto!important;
+    bottom:0!important;
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:820 / 590;
+    object-fit:contain!important;
+    object-position:center bottom!important;
     transform:none!important;
-    transform-origin:center center!important;
+    transform-origin:center bottom!important;
   }
   .hero-v8-poster{
     background-image:url("/assets/hero/portfolio-hero-mobile-poster.jpg")!important;
-    background-size:cover!important;
-    background-position:center center!important;
+    background-size:100% auto!important;
+    background-repeat:no-repeat!important;
+    background-position:center bottom!important;
   }
   .engineering-ai-shell-v88{
     padding-bottom:30px;
