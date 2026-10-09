@@ -9,7 +9,7 @@
   const showAll=()=>reveal.forEach(el=>el.classList.add('is-visible'));
   const syncResponsiveDetails=()=>{
     const compact=matchMedia('(max-width: 700px)').matches;
-    mobileDetails.forEach(el=>{ el.open=!compact; });
+    if(compact) mobileDetails.forEach(el=>{ el.open=false; });
   };
   syncResponsiveDetails();
   addEventListener('resize',syncResponsiveDetails,{passive:true});
