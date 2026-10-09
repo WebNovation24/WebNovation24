@@ -1,178 +1,141 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>Kadryn case study — Nicolas Gonfo</title>
-<meta content="Evidence, governance and reliable SaaS workflow semantics in a private TypeScript SaaS system." name="description"/>
+<title>Kadryn — Product Engineer TypeScript case study · Nicolas Gonfo</title>
+<meta content="A compact Product Engineer case study about TypeScript, PostgreSQL concurrency, reliable ingestion, product semantics and verifiable SaaS decisions." name="description"/>
 <link href="https://portfolio-sooty-xi-pkkherd44e.vercel.app/work/kadryn/" rel="canonical"/>
-<meta content="Kadryn case study — Nicolas Gonfo" property="og:title"/>
-<meta content="Evidence, governance and reliable SaaS workflow semantics in a private TypeScript SaaS system." property="og:description"/>
+<meta content="Kadryn — Product Engineer TypeScript case study" property="og:title"/>
+<meta content="Reliable ingestion, accountable AI cost decisions and inspectable TypeScript evidence." property="og:description"/>
 <meta content="website" property="og:type"/>
 <meta content="https://portfolio-sooty-xi-pkkherd44e.vercel.app/work/kadryn/" property="og:url"/>
-<meta content="https://portfolio-sooty-xi-pkkherd44e.vercel.app/assets/og.png" property="og:image"/>
+<meta content="https://portfolio-sooty-xi-pkkherd44e.vercel.app/assets/og-kadryn.png" property="og:image"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="#f6f5f1" name="theme-color"/>
+<meta content="#f6f3ed" name="theme-color"/>
 <link href="/assets/favicon.svg" rel="icon" type="image/svg+xml"/>
 <link href="/assets/styles.css" rel="stylesheet"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Nicolas Gonfo","sameAs":["https://github.com/WebNovation24"],"jobTitle":"Full-Stack TypeScript Engineer","homeLocation":{"@type":"Place","name":"Réunion, France"}}</script>
-<script defer="" src="/assets/site.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","name":"Nicolas Gonfo","jobTitle":"Product Engineer / Full-Stack TypeScript Engineer","sameAs":["https://github.com/WebNovation24"]},{"@type":"CreativeWork","name":"Kadryn Product Engineering Case Study","author":{"@type":"Person","name":"Nicolas Gonfo"},"about":["TypeScript","PostgreSQL","SaaS","Product Engineering"]}]}</script>
+<script defer src="/assets/site.js"></script>
 </head>
-<body class="case-page case-v81 kadryn-case">
+<body class="case-page case-v81 case-compact-v88 kadryn-case">
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header site-header-v8 case-header-v81" data-header><div class="shell header-v8-inner"><a class="brand brand-v8" href="/">Nicolas Gonfo</a><nav class="nav nav-v8" aria-label="Primary navigation"><a href="/#work">Work</a><a href="/#services">Services</a><a class="hide-mobile" href="/#about">About</a></nav><a class="header-cta-v8" href="mailto:gonfo.nicolas@gmail.com">Let\'s talk <span aria-hidden="true">→</span></a></div></header>
+<header class="site-header site-header-v8 case-header-v81" data-header>
+  <div class="shell header-v8-inner">
+    <a class="brand brand-v8" href="/">Nicolas Gonfo</a>
+    <nav class="nav nav-v8" aria-label="Primary navigation"><a href="/#work">Work</a><a href="/#services">Capabilities</a><a class="hide-mobile" href="/#about">About</a></nav>
+    <a class="header-cta-v8" href="mailto:gonfo.nicolas@gmail.com" data-track="contact_email">Let's talk <span aria-hidden="true">→</span></a>
+  </div>
+</header>
 <main id="main">
-<section class="case-hero-v4 shell">
-<div class="case-hero-copy-v4" data-reveal="hero-copy">
-<div class="signal-label"><span aria-hidden="true" class="signal-dot"></span> Case study · Kadryn</div>
-<h1>Evidence, governance and reliable SaaS workflow semantics.</h1>
-<p>Kadryn is a SaaS system that helps teams understand AI usage and cost signals while keeping recommendation, decision and runtime control as distinct product concepts.</p>
-<dl class="case-summary case-summary-v82">
-<div><dt>My role</dt><dd>Full-stack TypeScript · product engineering</dd></div>
-<div><dt>Key challenge</dt><dd>Keep product authority proportional to evidence</dd></div><div><dt>Scope</dt><dd>Ingestion · product semantics · verification</dd></div>
-</dl>
-<div class="tech-list"><span>TypeScript</span><span>Next.js</span><span>PostgreSQL</span><span>Prisma</span><span>Stripe</span><span>Inngest</span><span>Sentry</span><span>Vitest</span></div>
-</div>
-<figure class="case-real-visual case-kadryn-board-v85" data-reveal="image">
-<img alt="Kadryn canonical responsive product UI artifact showing desktop and mobile states across developers, alerts, analytics and costs." fetchpriority="high" height="941" src="/assets/projects/kadryn-responsive-frames-r2-b2-1.png" width="1672"/>
-</figure>
+<section class="case-compact-hero-v88">
+  <div class="shell case-compact-hero-grid-v88">
+    <div class="case-compact-copy-v88" data-reveal="hero-copy">
+      <div class="signal-label"><span class="signal-dot" aria-hidden="true"></span> Case study · Kadryn</div>
+      <h1>Reliable ingestion and accountable AI cost decisions.</h1>
+      <p>Kadryn is a private B2B SaaS product where AI usage and cost signals must stay separate from human decisions and runtime control.</p>
+      <dl class="case-compact-summary-v88">
+        <div><dt>My role</dt><dd>Product Engineer · Full-Stack TypeScript</dd></div>
+        <div><dt>Challenge</dt><dd>Keep product authority proportional to evidence</dd></div>
+        <div><dt>Scope</dt><dd>Ingestion · semantics · verification</dd></div>
+      </dl>
+      <div class="tech-list"><span>TypeScript</span><span>Next.js</span><span>PostgreSQL</span><span>Prisma</span><span>Inngest</span><span>Vitest</span></div>
+      <div class="case-outcome-v88"><span>Observable outcome</span><p>Exact retries can resolve as replays without being treated as new usage, while concurrent first submissions still preserve quota correctness.</p></div>
+    </div>
+    <figure class="case-compact-hero-media-v88 reveal">
+      <picture><source srcset="/assets/projects/kadryn-art-directed-project-visual-v8.webp" type="image/webp"/><img src="/assets/projects/kadryn-art-directed-project-visual-v8.png" width="1448" height="1086" alt="Kadryn product visual showing AI cost signals and decision context." loading="eager"/></picture>
+    </figure>
+  </div>
 </section>
-<section class="case-capabilities-v81" aria-labelledby="kadryn-capabilities">
+
+<nav class="case-compact-nav-v88" aria-label="Case study sections">
+  <a href="#problem">Problem</a><a href="#built">What I built</a><a href="#decisions">Decisions</a><a href="#evidence">Evidence</a><a href="#outcome">Outcome</a>
+</nav>
+
+<section class="case-compact-section-v88" id="problem">
+  <div class="shell case-compact-two-v88">
+    <div class="case-compact-heading-v88 reveal"><span class="eyebrow-v8">01 · Problem</span><h2>A retry must not become new usage.</h2><p>One concrete failure mode made the product contract testable: the same usage submission can arrive twice while monthly quota state is contested.</p></div>
+    <div class="case-scenario-compact-v88">
+      <article class="reveal"><span>Constraint</span><h3>Preserve the safeguards</h3><p>Tenant, retention and quota rules could not be weakened just to make retries idempotent.</p></article>
+      <article class="reveal"><span>Scope decision</span><h3>Fix ordering, not the whole pipeline</h3><p>I kept the change narrow: resolve known exact replays before avoidable quota contention, then re-check inside the critical section for concurrent first submissions.</p></article>
+      <article class="reveal"><span>User/product consequence</span><h3>Retries stop looking like new intent</h3><p>The system can distinguish a repeated request from genuinely new usage without hiding concurrency behind optimistic UI semantics.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="case-compact-section-v88 case-compact-soft-v88" id="built">
   <div class="shell">
-    <div class="case-capabilities-head-v81">
-      <span class="kicker">Recruiter scan</span>
-      <h2 id="kadryn-capabilities">What this case demonstrates.</h2>
-    </div>
-    <div class="case-capabilities-grid-v81">
-      <article><span>01</span><strong>TypeScript product engineering</strong><p>Product semantics and implementation stay aligned instead of treating frontend copy and backend behavior as separate concerns.</p></article>
-      <article><span>02</span><strong>Backend &amp; data depth</strong><p>PostgreSQL concurrency, exact replay handling, quotas and tenant boundaries are part of the product behavior.</p></article>
-      <article><span>03</span><strong>Async system design</strong><p>Long-running work moves to background workflow infrastructure instead of being hidden inside synchronous request paths.</p></article>
-      <article><span>04</span><strong>Verification discipline</strong><p>Unit/integration checks and candidate-scoped release evidence keep implementation claims proportional to what was actually verified.</p></article>
-    </div>
-  </div>
-</section>
-<section class="case-scenario-v83" id="kadryn-scenario" aria-labelledby="kadryn-scenario-title">
-  <div class="shell case-scenario-grid-v83">
-    <div>
-      <span class="kicker">Concrete failure mode</span>
-      <h2 id="kadryn-scenario-title">The same usage submission arrives twice while quota state is contested.</h2>
-      <p>The product must recognize an exact retry without weakening tenant, retention or quota rules for genuinely new usage.</p>
-    </div>
-    <div class="case-scenario-steps-v83" aria-label="Kadryn retry scenario">
-      <article><span>01 · Constraint</span><strong>Preserve existing safeguards</strong><p>Tenant, retention and monthly quota behavior could not be bypassed just to make retries idempotent.</p></article>
-      <article><span>02 · Scope choice</span><strong>Fix the direct-ingest ordering</strong><p>I kept the change narrow: replay resolution moved ahead of avoidable quota contention, with a guarded re-check inside the critical section for concurrent first submissions.</p></article>
-      <article><span>03 · Verification</span><strong>Reproduce the invariant</strong><p>The private regression suite covers the behavior; a small public TypeScript reproduction below makes the ordering inspectable without exposing production source.</p></article>
+    <div class="case-compact-intro-v88 reveal"><div><span class="eyebrow-v8">02 · What I built</span><h2>Product semantics backed by a real TypeScript system.</h2></div><p>I owned the path from product meaning to backend behavior and verification rather than treating UI copy, ingestion and release evidence as disconnected work.</p></div>
+    <div class="case-built-grid-v88">
+      <div class="case-built-list-v88">
+        <article class="reveal"><b>01</b><div><h3>Concurrent ingestion</h3><p>Exact replay handling, quota correctness and tenant-aware ingestion behavior.</p></div></article>
+        <article class="reveal"><b>02</b><div><h3>Decision Accountability</h3><p>Recommendation, human decision and runtime control remain distinct product concepts.</p></div></article>
+        <article class="reveal"><b>03</b><div><h3>Verification discipline</h3><p>Candidate-scoped tests and release evidence keep public claims proportional to what was actually verified.</p></div></article>
+        <article class="reveal"><b>04</b><div><h3>Responsive product states</h3><p>Technical status, actions and evidence were designed to survive desktop, tablet and mobile without changing meaning.</p></div></article>
+      </div>
+      <figure class="case-board-v88 reveal"><img src="/assets/projects/kadryn-app-ux-consistency-r1b-wireframe-board.png" width="1536" height="1152" loading="lazy" alt="Kadryn responsive application board showing desktop, tablet and mobile states."/></figure>
     </div>
   </div>
 </section>
-<section class="case-boundaries-v82" id="kadryn-boundaries" aria-labelledby="kadryn-boundaries-title">
+
+<section class="case-compact-section-v88" id="decisions">
   <div class="shell">
-    <header>
-      <span class="kicker">Product Engineer lens</span>
-      <h2 id="kadryn-boundaries-title">Where the TypeScript system has to stay honest.</h2>
-      <p>Three boundaries connect the product experience to backend behavior and verifiable delivery.</p>
-    </header>
-    <div class="case-boundary-flow-v82">
-      <article><span class="meta">Domain semantics</span><strong>Signal → recommendation → decision</strong><p>Product language maps to distinct states instead of collapsing recommendation, applied change and measured outcome into one “success”.</p><code>observe → recommend → decide → control → measure</code></article>
-      <article><span class="meta">Ingestion boundary</span><strong>Replay handling before quota contention</strong><p>Exact retries can resolve as replays while tenant, retention and quota rules stay intact under concurrent PostgreSQL writes.</p><code>request → replay resolution → quota lock → write</code></article>
-      <article><span class="meta">Release boundary</span><strong>Candidate-scoped evidence</strong><p>Tests and build evidence are tied to the candidate being evaluated rather than treating tooling presence as proof.</p><code>unit / integration → build → scoped release evidence</code></article>
+    <div class="case-compact-intro-v88 reveal"><div><span class="eyebrow-v8">03 · Decisions & trade-offs</span><h2>Three decisions kept the system honest without overbuilding it.</h2></div><p>The goal was not maximum architecture. It was the smallest reliable slice that preserved the product invariants worth protecting.</p></div>
+    <div class="case-decision-grid-v88">
+      <article class="reveal"><span>Replay ordering</span><h3>Recognize a known replay before unnecessary quota contention.</h3><p>Then re-check replay state inside the lock so two concurrent first submissions cannot both become new usage.</p></article>
+      <article class="reveal"><span>Product authority</span><h3>Recommendation is not execution.</h3><p>A recommendation can inform a decision; it cannot silently become runtime control or be reported as measured business impact.</p></article>
+      <article class="reveal"><span>Scope control</span><h3>Strengthen the invariant before broadening the surface.</h3><p>I preferred a narrow verified behavior with regression coverage over a larger rewrite that would increase change surface without improving the core guarantee.</p></article>
     </div>
   </div>
 </section>
-<nav aria-label="Kadryn case study sections" class="case-subnav shell"><a href="#contribution">My contribution</a><a href="#challenge">Challenge</a><a href="#decisions">Decisions</a><a href="#evidence">Evidence</a></nav>
-<section class="section-band section-soft" id="contribution"><div class="shell section case-section-grid"><div class="case-section-title reveal"><span class="kicker">01 · Verified contribution</span><h2>What I implemented.</h2><p>These two contributions are directly attributable to merged repository changes.</p></div><div class="contribution-editorial">
-<article class="reveal"><span class="meta">PostgreSQL · concurrency</span><h3>Concurrent usage ingestion</h3><p>I hardened the direct-ingest path against duplicate concurrent submissions. I reproduced PostgreSQL uniqueness and transaction-contention races, changed replay resolution so exact retries can resolve before the monthly quota lock, and kept tenant, retention and quota checks intact.</p></article>
-<article class="reveal"><span class="meta">Product semantics · regression</span><h3>Decision Accountability control</h3><p>I implemented Kadryn’s Decision Accountability public control and its regression checks so the product keeps observation, recommendation, optional runtime control and post-change measurement distinct without turning synthetic/demo material into customer proof.</p></article>
-<figure class="case-canonical-artifact-v85 reveal">
-  <img src="/assets/projects/kadryn-developers-overview-r2-b2-1.png" width="1448" height="1086" loading="lazy" alt="Kadryn canonical Developers Overview product UI artifact showing desktop and mobile states, integration readiness, required actions and technical status."/>
-</figure>
-<section class="technical-evidence-v83 reveal" id="public-typescript-evidence" aria-labelledby="public-typescript-evidence-title">
-  <div class="technical-evidence-head-v83">
-    <div><span class="meta">Public technical reproduction · TypeScript</span><h3 id="public-typescript-evidence-title">Replay before quota contention, with a guarded concurrent re-check.</h3></div>
-    <p>This is an independently written reproduction of the invariant described above — <strong>not production source code</strong>. It is intentionally small enough to inspect during a hiring screen.</p>
-  </div>
-  <div class="technical-evidence-code-v83">
-    <figure>
-      <figcaption>Implementation invariant</figcaption>
-      <pre><code>const knownReplay =
+
+<section class="case-compact-section-v88 case-compact-soft-v88" id="evidence">
+  <div class="shell">
+    <div class="case-compact-intro-v88 reveal"><div><span class="eyebrow-v8">04 · Evidence</span><h2>A hiring manager can inspect the concurrency invariant.</h2></div><p>The private product stays private. A small independently written public reproduction makes the ordering and regression behavior reviewable without presenting it as production source.</p></div>
+    <div class="evidence-compact-v88">
+      <div class="evidence-code-v88 reveal"><span>Implementation invariant</span><pre><code>const knownReplay =
   await repo.findExactReplay(command);
 
-if (knownReplay) {
-  const quota = await repo.readQuota(
-    command.tenantId,
-    command.month,
-  );
-  return {
-    kind: "replay",
-    eventId: knownReplay.eventId,
-    usedAfter: quota.used,
-  };
-}
+if (knownReplay) return asReplay(knownReplay);
 
 return repo.withMonthlyQuotaLock(
-  command.tenantId,
-  command.month,
+  tenantId,
+  month,
   async () =&gt; {
     const concurrentReplay =
       await repo.findExactReplay(command);
 
-    if (concurrentReplay) {
-      const quota = await repo.readQuota(
-        command.tenantId,
-        command.month,
-      );
-      return {
-        kind: "replay",
-        eventId: concurrentReplay.eventId,
-        usedAfter: quota.used,
-      };
-    }</code></pre>
-    </figure>
-    <figure>
-      <figcaption>Concurrency regression</figcaption>
-      <pre><code>const results = await Promise.all([
-  ingestUsage(repo, command),
-  ingestUsage(repo, command),
-]);
+    if (concurrentReplay) return asReplay(concurrentReplay);
 
-assert.equal(
-  results.filter(r =&gt; r.kind === "accepted").length,
-  1,
-);
-assert.equal(
-  results.filter(r =&gt; r.kind === "replay").length,
-  1,
-);
-assert.equal(repo.events.length, 1);</code></pre>
-    </figure>
-  </div>
-  <div class="technical-evidence-actions-v83">
-    <a class="button primary" href="https://github.com/WebNovation24/portfolio/tree/main/technical-evidence/kadryn-replay-quota">Inspect the public reproduction <span aria-hidden="true">↗</span></a>
-    <span>Typecheck + 3 focused tests validated before publication.</span>
-  </div>
-</section>
-</div></div></section>
-<section class="section-band section-soft case-design-evidence-v85" id="responsive-system">
-  <div class="shell section">
-    <div class="section-intro reveal">
-      <div><span class="kicker">02 · Product UI system</span><h2>Responsive behavior was designed as product behavior.</h2></div>
-      <p>The UI work was not treated as “desktop first, stack later”. Navigation, density, state hierarchy and touch behavior were reviewed across desktop, tablet and mobile.</p>
+    return applyQuotaAndInsert(command);
+  },
+);</code></pre></div>
+      <div class="evidence-summary-v88 reveal">
+        <span class="meta">Focused regression</span>
+        <h3>Two identical first submissions still insert once.</h3>
+        <ul><li>1 accepted result</li><li>1 replay result</li><li>1 persisted event</li><li>quota still applies to genuinely new usage</li></ul>
+        <a class="button primary" href="https://github.com/WebNovation24/portfolio/tree/main/technical-evidence/kadryn-replay-quota" data-track="technical_evidence_kadryn">Inspect TypeScript reproduction <span aria-hidden="true">↗</span></a>
+      </div>
     </div>
-    <figure class="case-r1b-board-v85 reveal">
-      <img src="/assets/projects/kadryn-app-ux-consistency-r1b-wireframe-board.png" width="1448" height="1086" loading="lazy" alt="Kadryn App UX Consistency R1-B wireframe board showing desktop, tablet and mobile app-shell states, responsive alerts and billing states, long labels, overflow handling and accessibility notes."/>
-    </figure>
+    <details class="case-deep-dive-v88" open data-mobile-collapse>
+      <summary>Additional product-state evidence</summary>
+      <div class="deep-dive-grid-v88"><p>The responsive product system keeps status, action and evidence hierarchy consistent across device sizes instead of changing the underlying semantics for mobile.</p><figure><img src="/assets/projects/kadryn-developers-overview-r2-b2-1.png" width="1448" height="1086" loading="lazy" alt="Kadryn Developers Overview responsive product design reference."/></figure></div>
+    </details>
   </div>
 </section>
-<section class="section-band" id="challenge"><div class="shell section case-section-grid"><div class="case-section-title reveal"><span class="kicker">03 · Challenge</span><h2>Keep authority proportional to what the system knows.</h2></div><div class="case-narrative reveal"><p>AI usage data can support cost analysis, forecasting and optimization, but product semantics become risky when the interface implies more certainty than the underlying evidence supports. A recommendation is not an executed change. An executed change is not automatically a measured outcome. A measured outcome is not, by itself, causal proof of business impact.</p></div></div></section>
-<section class="decisions-v4 section-band" id="decisions"><div class="shell section"><div class="section-intro reveal"><div><span class="kicker">04 · Technical decisions</span><h2>Semantics, async work and scoped proof.</h2></div><p>Three decisions show how the product avoids claiming more than the system can establish.</p></div>
-<article class="decision-row reveal"><span class="decision-num">01</span><div><h3>Keep product authority proportional to evidence</h3><p><strong>Problem.</strong> A cost/optimization product can make a workflow appear more conclusive than the underlying data permits.</p><p><strong>Decision.</strong> Model applied changes, measured outcomes and user-confirmed outcomes separately; keep observation, recommendation and runtime enforcement as distinct capabilities.</p><p><strong>Verification.</strong> Product Truth is versioned and unit/integration test harnesses cover the documented behavior.</p></div></article>
-<article class="decision-row reveal"><span class="decision-num">02</span><div><h3>Separate background work from request handling</h3><p><strong>Problem.</strong> Provider and data-processing work can exceed the responsibilities of a synchronous web request.</p><p><strong>Decision.</strong> Use background workflow infrastructure for asynchronous processing instead of hiding long-running work inside request paths.</p><p><strong>Verification.</strong> Inngest is an evidenced dependency and the repository includes unit/integration test scripts.</p></div></article>
-<article class="decision-row reveal"><span class="decision-num">03</span><div><h3>Treat release evidence as scoped evidence</h3><p><strong>Problem.</strong> Tooling presence or a previous deployment can be mistaken for proof that the current candidate is valid.</p><p><strong>Decision.</strong> Use explicit unit/integration gates and release discipline rather than relying on configuration presence alone.</p><p><strong>Verification.</strong> Public evidence supports the existence and scope of those gates, not universal correctness.</p></div></article>
-</div></section>
-<section class="proof-section-v4 section-band" id="evidence"><div class="shell section case-section-grid"><div class="case-section-title reveal"><span class="kicker kicker-on-dark">05 · Real verification evidence</span><h2>Proof stays separate from presentation.</h2><p>A sanitized release summary from a merged Kadryn change.</p></div><figure class="proof-artifact proof-artifact-dark reveal"><div class="proof-head"><span class="meta">Authenticated Costs runtime contract</span><strong>Verified candidate</strong></div><div class="proof-grid"><div><span>Daily aggregate contract</span><strong>3 / 3 PASS</strong></div><div><span>Persona regressions</span><strong>12 / 12 PASS</strong></div><div><span>TypeScript</span><strong>PASS</strong></div><div><span>Production build</span><strong>PASS</strong></div></div><div class="proof-detail"><strong>Data parity check</strong><span>10,000 synthetic events retained matching raw/day cost and token totals during the controlled verification.</span></div><figcaption>Sanitized release evidence from the private repository. Internal database names, branch identifiers and private URLs are intentionally omitted.</figcaption></figure></div></section>
-<section class="case-close section-band"><div class="shell section case-close-grid reveal"><div><span class="kicker">Outcome</span><h2>Claims stay proportional to what the system actually knows.</h2></div><div><p>Kadryn keeps recommendations, applied changes and measured outcomes separate, while ingestion, billing and test layers can be verified independently.</p><div class="demonstrates-inline"><span>Product authority</span><span>TypeScript SaaS</span><span>Scoped verification</span></div></div></div></section>
-<section class="section-band"><div class="shell section"><a class="next-system" href="/work/travel-orchestration/"><span class="meta">Next case study</span><strong>Travel orchestration SaaS</strong><span>Multi-tenant authority, RLS and critical workflow state <span aria-hidden="true">→</span></span></a></div></section>
+
+<section class="case-compact-outcome-v88" id="outcome">
+  <div class="shell case-outcome-grid-v88">
+    <div class="reveal"><span class="eyebrow-v8">05 · Outcome</span><h2>Clearer product meaning, narrower technical risk.</h2></div>
+    <div class="case-outcome-list-v88">
+      <article class="reveal"><strong>Replay correctness</strong><p>Exact retries no longer need to compete as if they were new product intent.</p></article>
+      <article class="reveal"><strong>Concurrency preserved</strong><p>Concurrent first submissions still pass through the guarded critical section before usage is applied.</p></article>
+      <article class="reveal"><strong>Claims stay bounded</strong><p>Release evidence describes verified behavior without turning technical/demo evidence into customer or causal business proof.</p></article>
+    </div>
+  </div>
+  <div class="shell case-next-v88"><a href="/work/travel-orchestration/" data-track="next_case_travel"><span>Next case study</span><strong>Travel orchestration SaaS →</strong></a></div>
+</section>
 </main>
-<footer class="site-footer"><div class="shell footer-inner"><span>© Nicolas Gonfo</span><span>Full-Stack TypeScript Engineer · Réunion, France · UTC+4</span></div></footer>
-</body></html>
+<footer class="site-footer site-footer-v8"><div class="shell footer-inner"><span>© Nicolas Gonfo</span><span>Product Engineer · Full-Stack TypeScript · France (Réunion) · UTC+4</span></div></footer>
+</body>
+</html>
