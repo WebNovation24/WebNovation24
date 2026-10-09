@@ -5051,13 +5051,13 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offs
   }
   .hero-v8-poster{
     background-size:cover!important;
-    background-position:center bottom!important;
+    background-position:center center!important;
   }
 }
 @media (max-width:390px) and (max-height:760px){
   .hero-v8-video{
     transform:none!important;
-    transform-origin:center bottom!important;
+    transform-origin:center center!important;
   }
 }
 
@@ -5683,15 +5683,15 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offs
     height:auto!important;
     aspect-ratio:820 / 590;
     object-fit:contain!important;
-    object-position:center bottom!important;
+    object-position:center center!important;
     transform:none!important;
-    transform-origin:center bottom!important;
+    transform-origin:center center!important;
   }
   .hero-v8-poster{
     background-image:url("/assets/hero/portfolio-hero-mobile-poster.jpg")!important;
     background-size:100% auto!important;
     background-repeat:no-repeat!important;
-    background-position:center bottom!important;
+    background-position:center center!important;
   }
   .engineering-ai-shell-v88{
     padding-bottom:30px;
