@@ -5045,9 +5045,9 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offs
     overflow-x:clip;
   }
   .hero-v8-video{
-    object-position:center bottom!important;
+    object-position:center center!important;
     transform:none!important;
-    transform-origin:center bottom!important;
+    transform-origin:center center!important;
   }
   .hero-v8-poster{
     background-size:cover!important;
