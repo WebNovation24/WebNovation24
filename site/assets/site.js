@@ -4,16 +4,8 @@
   const header=document.querySelector('[data-header]');
   const trace=document.querySelector('.signal-trace,.signal-path-v7,.systems-line-v8');
   const heroVideo=document.querySelector('[data-hero-video]');
-  const mobileDetails=[...document.querySelectorAll('[data-mobile-collapse]')];
 
   const showAll=()=>reveal.forEach(el=>el.classList.add('is-visible'));
-  const syncResponsiveDetails=()=>{
-    const compact=matchMedia('(max-width: 700px)').matches;
-    mobileDetails.forEach(el=>{ el.open=!compact; });
-  };
-  syncResponsiveDetails();
-  addEventListener('resize',syncResponsiveDetails,{passive:true});
-
   const track=(name,data={})=>window.va?.('event',{name,data});
   document.addEventListener('click',event=>{
     const link=event.target.closest?.('[data-track]');
