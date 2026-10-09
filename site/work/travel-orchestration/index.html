@@ -1,101 +1,138 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Travel orchestration SaaS case study — Nicolas Gonfo</title>
-<meta name="description" content="Multi-tenant authority, RLS, critical workflow state and reproducible verification in a private travel operations system.">
-<link rel="canonical" href="https://portfolio-sooty-xi-pkkherd44e.vercel.app/work/travel-orchestration/">
-<meta property="og:title" content="Travel orchestration SaaS case study — Nicolas Gonfo">
-<meta property="og:description" content="Multi-tenant authority, RLS, critical workflow state and reproducible verification in a private travel operations system.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://portfolio-sooty-xi-pkkherd44e.vercel.app/work/travel-orchestration/">
-<meta property="og:image" content="https://portfolio-sooty-xi-pkkherd44e.vercel.app/assets/og.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#f6f2ea">
-<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Nicolas Gonfo","sameAs":["https://github.com/WebNovation24"],"jobTitle":"Full-Stack TypeScript Engineer","homeLocation":{"@type":"Place","name":"Réunion, France"}}</script>
-<script src="/assets/site.js" defer></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Travel orchestration SaaS — Product Engineer case study · Nicolas Gonfo</title>
+<meta content="A compact TypeScript Product Engineer case study about authorization, multi-tenancy, RLS, durable async workflows and provider reconciliation." name="description"/>
+<link href="https://portfolio-sooty-xi-pkkherd44e.vercel.app/work/travel-orchestration/" rel="canonical"/>
+<meta content="Travel orchestration SaaS — Product Engineer case study" property="og:title"/>
+<meta content="Authority, durable workflows and provider reconciliation in a private multi-tenant TypeScript SaaS." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://portfolio-sooty-xi-pkkherd44e.vercel.app/work/travel-orchestration/" property="og:url"/>
+<meta content="https://portfolio-sooty-xi-pkkherd44e.vercel.app/assets/og-travel.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="#eef4f7" name="theme-color"/>
+<link href="/assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/assets/styles.css" rel="stylesheet"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","name":"Nicolas Gonfo","jobTitle":"Product Engineer / Full-Stack TypeScript Engineer","sameAs":["https://github.com/WebNovation24"]},{"@type":"CreativeWork","name":"Travel Orchestration SaaS Product Engineering Case Study","author":{"@type":"Person","name":"Nicolas Gonfo"},"about":["TypeScript","Authorization","PostgreSQL","RLS","Async workflows"]}]}</script>
+<script defer src="/assets/site.js"></script>
 </head>
-<body class="case-page case-v81 travel-case">
+<body class="case-page case-v81 case-compact-v88 travel-case">
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header site-header-v8 case-header-v81" data-header><div class="shell header-v8-inner"><a class="brand brand-v8" href="/">Nicolas Gonfo</a><nav class="nav nav-v8" aria-label="Primary navigation"><a href="/#work">Work</a><a href="/#services">Services</a><a class="hide-mobile" href="/#about">About</a></nav><a class="header-cta-v8" href="mailto:gonfo.nicolas@gmail.com">Let\'s talk <span aria-hidden="true">→</span></a></div></header>
+<header class="site-header site-header-v8 case-header-v81" data-header>
+  <div class="shell header-v8-inner">
+    <a class="brand brand-v8" href="/">Nicolas Gonfo</a>
+    <nav class="nav nav-v8" aria-label="Primary navigation"><a href="/#work">Work</a><a href="/#services">Capabilities</a><a class="hide-mobile" href="/#about">About</a></nav>
+    <a class="header-cta-v8" href="mailto:gonfo.nicolas@gmail.com" data-track="contact_email">Let's talk <span aria-hidden="true">→</span></a>
+  </div>
+</header>
 <main id="main">
-<section class="travel-hero-v4">
-  <div class="shell travel-hero-grid">
-    <div class="case-hero-copy-v4" data-reveal="hero-copy">
-      <div class="signal-label signal-label-dark"><span class="signal-dot" aria-hidden="true"></span> Case study · Travel orchestration SaaS</div>
-      <h1>Multi-tenant authority and critical workflow state.</h1>
-      <p>A private travel operations system that separates authentication, business authorization, published traveler-facing state and critical external outcomes. The cover is an art-directed concept view; the implementation evidence is documented below.</p>
-      <dl class="case-summary case-summary-dark case-summary-v82"><div><dt>My role</dt><dd>Full-stack TypeScript · product engineering</dd></div><div><dt>Key challenge</dt><dd>Keep authority correct across identity, data and providers</dd></div><div><dt>Scope</dt><dd>Auth · async workflows · reconciliation</dd></div></dl>
-      <div class="tech-list tech-list-dark"><span>TypeScript</span><span>Next.js</span><span>PostgreSQL</span><span>Supabase</span><span>Better Auth</span><span>Vitest</span><span>Playwright</span><span>RLS</span></div>
+<section class="case-compact-hero-v88 travel-compact-hero-v88">
+  <div class="shell case-compact-hero-grid-v88">
+    <div class="case-compact-copy-v88" data-reveal="hero-copy">
+      <div class="signal-label"><span class="signal-dot" aria-hidden="true"></span> Case study · Travel orchestration SaaS</div>
+      <h1>Authority, durable workflows and provider reconciliation.</h1>
+      <p>A private multi-tenant TypeScript SaaS where a valid session, current business access and uncertain external-provider outcomes must never be treated as the same thing.</p>
+      <dl class="case-compact-summary-v88">
+        <div><dt>My role</dt><dd>Product Engineer · Full-Stack TypeScript</dd></div>
+        <div><dt>Challenge</dt><dd>Keep authority correct across identity, data and providers</dd></div>
+        <div><dt>Scope</dt><dd>Auth · async workflows · reconciliation</dd></div>
+      </dl>
+      <div class="tech-list"><span>TypeScript</span><span>Next.js</span><span>PostgreSQL</span><span>Supabase</span><span>Better Auth</span><span>Vitest</span><span>Playwright</span></div>
+      <div class="case-outcome-v88"><span>Observable outcome</span><p>Suspending organization membership removes business access even when the user's authentication session is still valid.</p></div>
     </div>
-    <figure class="travel-case-cover" data-reveal="image"><img src="/assets/projects/travel-orchestration-cover-v3.png" alt="Conceptual travel orchestration cover illustrating authority, workflow and uncertain external outcomes." width="1400" height="876" fetchpriority="high"></figure>
+    <figure class="case-compact-hero-media-v88 reveal"><img src="/assets/projects/travel-orchestration-cover-v3.png" width="1400" height="876" alt="Conceptual travel orchestration view showing authority, workflow and external outcome states." loading="eager"/></figure>
   </div>
 </section>
-<section class="case-capabilities-v81" aria-labelledby="travel-capabilities">
+
+<nav class="case-compact-nav-v88" aria-label="Case study sections">
+  <a href="#problem">Problem</a><a href="#built">What I built</a><a href="#decisions">Decisions</a><a href="#evidence">Evidence</a><a href="#outcome">Outcome</a>
+</nav>
+
+<section class="case-compact-section-v88" id="problem">
+  <div class="shell case-compact-two-v88">
+    <div class="case-compact-heading-v88 reveal"><span class="eyebrow-v8">01 · Problem</span><h2>Authentication can outlive business authority.</h2><p>A user can hold a valid browser session after their organization membership has been suspended. Treating authentication as authorization would keep access alive too long.</p></div>
+    <div class="case-scenario-compact-v88">
+      <article class="reveal"><span>Constraint</span><h3>Identity is not capability</h3><p>The product needed a current server-side answer to “what may this actor do now?” rather than trusting stale client or session state.</p></article>
+      <article class="reveal"><span>Scope decision</span><h3>Build the authority foundation first</h3><p>I prioritized organization membership, authorization boundaries, RLS-backed data access and operational states before widening the travel feature surface.</p></article>
+      <article class="reveal"><span>User/product consequence</span><h3>Revocation becomes immediate</h3><p>Business access follows current membership state rather than waiting for the authentication session to expire.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="case-compact-section-v88 case-compact-soft-v88" id="built">
   <div class="shell">
-    <div class="case-capabilities-head-v81">
-      <span class="kicker">Recruiter scan</span>
-      <h2 id="travel-capabilities">What this case demonstrates.</h2>
-    </div>
-    <div class="case-capabilities-grid-v81">
-      <article><span>01</span><strong>TypeScript system ownership</strong><p>Identity, authorization, workflow state and provider outcomes are handled as one product system rather than disconnected features.</p></article>
-      <article><span>02</span><strong>Authorization depth</strong><p>Better Auth, normalized actor context and Supabase RLS keep session identity separate from business capability.</p></article>
-      <article><span>03</span><strong>Durable async work</strong><p>Leases, bounded claiming, retries, dead-letter handling and audited manual recovery make background operations explicit.</p></article>
-      <article><span>04</span><strong>Provider reconciliation</strong><p>Durable inbox processing, idempotence and stale/out-of-order rejection prevent external providers from becoming business authority.</p></article>
+    <div class="case-compact-intro-v88 reveal"><div><span class="eyebrow-v8">02 · What I built</span><h2>A TypeScript system that separates session, authority and external outcomes.</h2></div><p>The work spans product behavior and backend boundaries instead of hiding long-running travel operations behind synchronous request paths.</p></div>
+    <div class="case-built-list-v88 case-built-list-four-v88">
+      <article class="reveal"><b>01</b><div><h3>Authorization foundation</h3><p>Current organization membership and server-side actor context determine business capability.</p></div></article>
+      <article class="reveal"><b>02</b><div><h3>RLS-backed access</h3><p>PostgreSQL/Supabase RLS remains a complementary data boundary rather than a replacement for product authorization.</p></div></article>
+      <article class="reveal"><b>03</b><div><h3>Durable async work</h3><p>Leases, bounded claiming, retries, dead-letter handling and explicit recovery keep provider work observable.</p></div></article>
+      <article class="reveal"><b>04</b><div><h3>Provider reconciliation</h3><p>Durable inbox processing and stale/out-of-order rejection prevent external events from silently overwriting newer business state.</p></div></article>
     </div>
   </div>
 </section>
-<section class="case-scenario-v83" id="travel-scenario" aria-labelledby="travel-scenario-title">
-  <div class="shell case-scenario-grid-v83">
-    <div>
-      <span class="kicker">Concrete failure mode</span>
-      <h2 id="travel-scenario-title">A session is still valid after organization membership is suspended.</h2>
-      <p>The user may still be authenticated, but the product must stop treating that session as proof of current business access.</p>
-    </div>
-    <div class="case-scenario-steps-v83" aria-label="Travel authorization scenario">
-      <article><span>01 · Constraint</span><strong>Identity can outlive authority</strong><p>Revoking business membership cannot rely on waiting for the browser session to expire or on client-side state becoming fresh.</p></article>
-      <article><span>02 · Scope choice</span><strong>Rebuild authority from current state</strong><p>I kept authentication and authorization separate: current organization/membership is resolved server-side, while RLS remains a second boundary at the data layer.</p></article>
-      <article><span>03 · Verification</span><strong>Reuse the same valid token</strong><p>AUTH-0 verifies the concrete outcome: the session remains valid while Data API and Storage access are denied after membership suspension.</p></article>
-    </div>
-  </div>
-</section>
-<section class="case-boundaries-v82" id="travel-boundaries" aria-labelledby="travel-boundaries-title">
+
+<section class="case-compact-section-v88" id="decisions">
   <div class="shell">
-    <header>
-      <span class="kicker">Product Engineer lens</span>
-      <h2 id="travel-boundaries-title">Authority crosses more than one layer.</h2>
-      <p>The implementation keeps identity, business capability, data access and provider outcomes separate.</p>
-    </header>
-    <div class="case-boundary-flow-v82">
-      <article><span class="meta">Identity boundary</span><strong>Session → ActorIdentity → ActorContext</strong><p>A valid session establishes identity; current organization and membership state are rechecked before business capability is trusted.</p><code>session ≠ business authorization</code></article>
-      <article><span class="meta">Data boundary</span><strong>Capability → PostgreSQL → RLS</strong><p>Server-side decisions and database RLS form separate layers, so access does not depend on stale client or session assumptions.</p><code>capability → query → row-level policy</code></article>
-      <article><span class="meta">Provider boundary</span><strong>Inbox → reconcile → authoritative state</strong><p>Idempotence, stale-event rejection and bounded recovery keep provider events as inputs to reconcile, not business truth by themselves.</p><code>event → inbox → reconcile → product state</code></article>
+    <div class="case-compact-intro-v88 reveal"><div><span class="eyebrow-v8">03 · Decisions & trade-offs</span><h2>Keep authority explicit at every boundary.</h2></div><p>The architecture was shaped around observable failure modes, not around adding abstractions for their own sake.</p></div>
+    <div class="case-decision-grid-v88">
+      <article class="reveal"><span>Authorization</span><h3>Rebuild current authority from server-side state.</h3><p>A valid authentication session identifies the user; current organization membership answers whether the requested business operation is still allowed.</p></article>
+      <article class="reveal"><span>Async operations</span><h3>Move uncertain provider work out of synchronous request paths.</h3><p>Leases, retries and dead-letter recovery make long-running operations explicit instead of pretending a timeout means success or failure.</p></article>
+      <article class="reveal"><span>Scope control</span><h3>Ship the reliable foundation before the full travel surface.</h3><p>Core authority, workflow state and reconciliation came first so later product modules could inherit the same operational rules.</p></article>
     </div>
   </div>
 </section>
-<nav class="case-subnav shell" aria-label="Travel case study sections"><a href="#contribution">My contribution</a><a href="#challenge">Challenge</a><a href="#decisions">Decisions</a><a href="#evidence">Evidence</a></nav>
 
-<section id="contribution" class="section-band section-soft"><div class="shell section case-section-grid"><div class="case-section-title reveal"><span class="kicker">01 · Verified contribution</span><h2>What I implemented.</h2><p>These contributions are tied to merged implementation PRs in the private repository.</p></div><div class="contribution-editorial contribution-editorial-three">
-<article class="reveal"><span class="meta">Identity · authorization · RLS</span><h3>Authentication and business authorization</h3><p>I implemented the Better Auth foundation and Supabase bridge around a normalized <code>ActorIdentity</code> and server-authoritative <code>ActorContext</code>. Current organization and membership state is rechecked in PostgreSQL, with RLS providing a second boundary instead of trusting session state alone.</p></article>
-<article class="reveal"><span class="meta">Async · retries · recovery</span><h3>Durable background automation</h3><p>I built the private automation queue used for traveler-access expiry, including idempotent discovery, bounded claiming, leases, retry/dead-letter handling and an audited manual-retry path.</p></article>
-<article class="reveal"><span class="meta">Provider state · reconciliation</span><h3>Provider reconciliation</h3><p>I implemented SaaS billing/provider reconciliation with a durable event inbox, idempotence, stale/out-of-order rejection and bounded recovery so provider state remains a projection rather than the product’s business authority.</p></article>
-</div></div></section>
+<section class="case-compact-section-v88 case-compact-soft-v88" id="evidence">
+  <div class="shell">
+    <div class="case-compact-intro-v88 reveal"><div><span class="eyebrow-v8">04 · Evidence</span><h2>The authorization invariant is independently reproducible.</h2></div><p>The production repository remains private. A small public TypeScript reproduction demonstrates the current-membership rule without exposing private schemas or business data.</p></div>
+    <div class="evidence-compact-v88">
+      <div class="evidence-code-v88 reveal"><span>Current authority</span><pre><code>export function authorizeOrganization(
+  identity,
+  requestedOrganizationId,
+  membership,
+) {
+  if (!identity.sessionValid) return deny("invalid-session");
 
-<section id="challenge" class="section-band"><div class="shell section case-section-grid"><div class="case-section-title reveal"><span class="kicker">02 · Challenge</span><h2>Preserve authority across session, data and external operations.</h2></div><div class="case-narrative reveal"><p>Travel operations combine commercial state, itinerary work, publication, traveler access and later changes. The interface may know an action was initiated while the authoritative business result still belongs to the server, database or external provider.</p><div class="authority-model" role="img" aria-label="Authority model from authentication through business authorization and RLS to reconciliation"><div><span>SESSION</span><strong>Identity</strong></div><i aria-hidden="true">→</i><div><span>AUTHORITY</span><strong>Membership + capability</strong></div><i aria-hidden="true">→</i><div><span>DATA</span><strong>PostgreSQL + RLS</strong></div><i aria-hidden="true">→</i><div><span>OUTCOME</span><strong>Reconcile before success</strong></div></div></div></div></section>
+  if (!membership ||
+      membership.organizationId !== requestedOrganizationId ||
+      membership.userId !== identity.userId) {
+    return deny("membership-missing");
+  }
 
-<section id="decisions" class="decisions-v4 section-band"><div class="shell section"><div class="section-intro reveal"><div><span class="kicker">03 · Technical decisions</span><h2>Identity, state authority and reproducible verification.</h2></div><p>Three decisions keep authority explicit across the system.</p></div>
-<article class="decision-row reveal"><span class="decision-num">01</span><div><h3>Authentication is not business authorization</h3><p><strong>Problem.</strong> An authenticated session proves identity, but not organization scope or business capability.</p><p><strong>Decision.</strong> Separate authentication/session ownership from business identity and authorization, with database RLS as defense in depth.</p><p><strong>Verification.</strong> Repository documentation covers integration testing and pgTAP/RLS validation within the local verification gate.</p></div></article>
-<article class="decision-row reveal"><span class="decision-num">02</span><div><h3>Unknown is a first-class outcome</h3><p><strong>Problem.</strong> External operations can leave the client uncertain after a timeout, interrupted navigation or provider return.</p><p><strong>Decision.</strong> Represent uncertain outcomes explicitly and reconcile against authoritative state before declaring success.</p><p><strong>Verification.</strong> The invariant is explicit in the repository’s current product authority.</p></div></article>
-<article class="decision-row reveal"><span class="decision-num">03</span><div><h3>Make release evidence reproducible</h3><p><strong>Problem.</strong> A multi-package SaaS can pass isolated checks while failing at data, build or browser boundaries.</p><p><strong>Decision.</strong> Use a local verification gate spanning static checks, database/RLS validation, build and browser E2E.</p><p><strong>Verification.</strong> README/scripts document the gate scope and staging separation without claiming universal environmental proof.</p></div></article>
-</div></section>
+  if (membership.status !== "active") {
+    return deny("membership-inactive");
+  }
 
-<section id="evidence" class="proof-section-v4 section-band"><div class="shell section case-section-grid"><div class="case-section-title reveal"><span class="kicker kicker-on-dark">04 · Real verification evidence</span><h2>Identity can stay valid while access is revoked.</h2><p>A sanitized AUTH-0 verification summary with tokens, user IDs, keys and environment identifiers removed.</p></div><figure class="proof-artifact proof-artifact-dark reveal"><div class="proof-head"><span class="meta">Better Auth → business authority → RLS</span><strong>AUTH-0 PASS</strong></div><div class="proof-grid"><div><span>Session authority</span><strong>PASS</strong></div><div><span>Domain isolation</span><strong>PASS</strong></div><div><span>Supabase JWT bridge</span><strong>PASS</strong></div><div><span>Data + Storage RLS</span><strong>PASS</strong></div></div><div class="proof-detail"><strong>Immediate revocation</strong><span>The same still-valid user token was reused after membership suspension: the session remained valid while Data API and Storage access were denied by current-state authorization/RLS.</span></div><figcaption>Sanitized verification evidence from the private repository. Credentials, identifiers and private infrastructure details are omitted.</figcaption></figure></div></section>
+  return { kind: "allowed", organizationId: requestedOrganizationId };
+}</code></pre></div>
+      <div class="evidence-summary-v88 reveal">
+        <span class="meta">Focused regression</span>
+        <h3>The same valid session loses business access after suspension.</h3>
+        <ul><li>active membership → allowed</li><li>suspended membership → denied</li><li>cross-organization membership → denied</li><li>identity and business capability remain separate</li></ul>
+        <a class="button primary" href="https://github.com/WebNovation24/portfolio/tree/main/technical-evidence/travel-current-authority" data-track="technical_evidence_travel">Inspect TypeScript reproduction <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <details class="case-deep-dive-v88" open data-mobile-collapse>
+      <summary>Operational evidence beyond authorization</summary>
+      <div class="deep-dive-text-v88"><p>Durable provider work uses explicit states, bounded claiming, retries and recovery paths. Reconciliation protects newer business state from stale or out-of-order external outcomes instead of treating provider responses as automatic truth.</p></div>
+    </details>
+  </div>
+</section>
 
-<section class="case-close section-band"><div class="shell section case-close-grid reveal"><div><span class="kicker">Outcome</span><h2>Identity, authorization and external outcomes stay separate.</h2></div><div><p>A session establishes identity; current business capabilities and RLS decide access; external/provider results are reconciled before they become authoritative product state.</p><div class="demonstrates-inline"><span>Authorization boundaries</span><span>Workflow uncertainty</span><span>Operational recovery</span></div></div></div></section>
-<section class="section-band"><div class="shell section"><a class="next-system" href="/work/kadryn/"><span class="meta">Other case study</span><strong>Kadryn</strong><span>Evidence, governance and reliable SaaS workflow semantics <span aria-hidden="true">→</span></span></a></div></section>
+<section class="case-compact-outcome-v88" id="outcome">
+  <div class="shell case-outcome-grid-v88">
+    <div class="reveal"><span class="eyebrow-v8">05 · Outcome</span><h2>Business access and provider state stay explicit.</h2></div>
+    <div class="case-outcome-list-v88">
+      <article class="reveal"><strong>Immediate revocation</strong><p>Suspending membership removes business access even when the authentication session remains valid.</p></article>
+      <article class="reveal"><strong>Recoverable async work</strong><p>Long-running operations have visible failure and recovery paths instead of disappearing behind request timeouts.</p></article>
+      <article class="reveal"><strong>Safer reconciliation</strong><p>External events are processed as evidence to reconcile, not as unconditional authority over newer product state.</p></article>
+    </div>
+  </div>
+  <div class="shell case-next-v88"><a href="/work/kadryn/" data-track="next_case_kadryn"><span>Back to flagship case study</span><strong>Kadryn →</strong></a></div>
+</section>
 </main>
-<footer class="site-footer"><div class="shell footer-inner"><span>© Nicolas Gonfo</span><span>Full-Stack TypeScript Engineer · Réunion, France · UTC+4</span></div></footer>
-</body></html>
+<footer class="site-footer site-footer-v8"><div class="shell footer-inner"><span>© Nicolas Gonfo</span><span>Product Engineer · Full-Stack TypeScript · France (Réunion) · UTC+4</span></div></footer>
+</body>
+</html>
