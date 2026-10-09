@@ -1,21 +1,40 @@
-# Nicolas Gonfo — Portfolio
+# Nicolas Gonfo — Product Engineer / Full-Stack TypeScript
 
-Professional portfolio for Nicolas Gonfo, Full-Stack TypeScript Engineer focused on backend-oriented SaaS, workflow systems and product delivery.
+Public portfolio and selected technical evidence for **Nicolas Gonfo**, a backend-leaning Product Engineer focused on B2B SaaS, workflow-heavy systems, permissions, data integrity and reliable delivery.
 
-## Live site
+## Portfolio
 
-https://portfolio-sooty-xi-pkkherd44e.vercel.app
+**Live:** https://portfolio-sooty-xi-pkkherd44e.vercel.app
 
-## Focus
+Primary case studies:
 
-TypeScript, multi-tenant SaaS, authorization, PostgreSQL, workflow state, background processing, release verification and selected web/mobile product work.
+- **Kadryn** — AI usage/cost signals, accountable decisions, concurrent ingestion and release evidence.
+- **Travel orchestration SaaS** — multi-tenant authorization, RLS-backed access, durable async workflows and provider reconciliation.
+- **Selected client & product work** — web, e-commerce and mobile delivery.
 
-## Routes
+## Public TypeScript evidence
 
-- `/`
-- `/work/kadryn/`
-- `/work/travel-orchestration/`
+The product repositories remain private. Instead of exposing private production code, this repository includes small independently written reproductions of selected invariants:
 
-## Repository
+- [`technical-evidence/kadryn-replay-quota`](./technical-evidence/kadryn-replay-quota/) — replay ordering, concurrency and quota correctness.
+- [`technical-evidence/travel-current-authority`](./technical-evidence/travel-current-authority/) — authentication identity vs current organization membership/business capability.
 
-This repository contains the public static deployment artifact and portfolio styling. The selected product repositories remain private; no private product source is included here.
+These reproductions are intentionally narrow and reviewable during a hiring screen.
+
+## Engineering focus
+
+- TypeScript / Node.js / React / Next.js
+- PostgreSQL / Prisma / Supabase
+- Multi-tenancy, roles, permissions and RLS
+- Workflow state and durable async work
+- Stripe / Inngest / Sentry
+- Vitest / Playwright / release verification
+- AI-assisted implementation with human-owned architecture, review and validation
+
+## Contact
+
+- Email: **gonfo.nicolas@gmail.com**
+- GitHub: https://github.com/WebNovation24
+- Location: **France (Réunion) · UTC+4 · Remote worldwide**
+
+The public portfolio is designed to make product reasoning and selected engineering invariants inspectable without turning private source code or demo material into unsupported claims.
